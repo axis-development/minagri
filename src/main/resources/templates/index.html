@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head>
+    <meta charset="utf-8">
+
+    <!-- End Inspectlet JS Code -->
+    <script>
+        if (/MSIE 10/i.test(navigator.userAgent)) {
+            // This is internet explorer 10
+            window.location.href="/login?nosupportbrowser=1";
+        }
+        if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+            // This is internet explorer 9 or 11
+            window.location.href="/login?nosupportbrowser=1";
+        }
+
+        if (/Edge\/\d./i.test(navigator.userAgent)){
+            // This is Microsoft Edge
+            window.location.href="/login?nosupportbrowser=1";
+        }
+    </script>
+    <title>Axis Cloud Business</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link href="/merchant-theme/css/bootstrap.min.css" media="screen, print" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/font-awesome.min.css?98ca4c5ff2a8a1032920d977947f6537" media="screen, print" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/fullcalendar.css" media="screen" rel="stylesheet" type="text/css">        <!--[if IE 7]>
+    <link rel="stylesheet" href="/merchant-theme/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+    <link href="/merchant-theme/css/jquery-ui-1.10.3.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/chosen.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/datepicker.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/bootstrap-timepicker.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/js/plugins/editable/bootstrap3/css/bootstrap-editable.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/js/plugins/fileUpload/css/jquery.fileupload.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/jquery.gritter.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace-fonts.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace-rtl.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace-skins.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/axis.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/introjs.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/validationEngine.jquery.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/custom/custom.css" media="screen, print" rel="stylesheet" type="text/css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/merchant-theme/css/ace-ie.min.css" />
+    <![endif]-->
+    <script type="text/javascript" src="/merchant-theme/js/ace-extra.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <!--[if IE]><script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script><![endif]-->
+    <!--[if !IE]><!--><script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script><!--<![endif]-->
+    <script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/jquery.fix.clone.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/plugins/editable/bootstrap3/js/bootstrap-editable.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/merchant-theme/js/typeahead-bs2.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/jquery-numeric.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/intro.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/jquery.validationEngine-fr.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/jquery.validationEngine.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <script type="text/javascript" src="/js/custom.mine.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+    <style>
+        /* .yellow a {
+            background:#fee088!important;
+        } */
+    </style>
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112654565-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-112654565-4',{
+            'user_id': '6461',
+            'custom_map': {'dimension1': 'UserID'},
+            'UserID': '6461',
+            'BusinessIndustry': 'Apparel/Fashion',
+            'BusinessSize': '1-3',
+            'Plan': 'Startup',
+        });
+
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script type="text/javascript">
+        window.__be = window.__be || {};
+        window.__be.id = "5f6a0babaaa01e0006578307";
+        (function() {
+            var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+            be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+        })();
+    </script>
+</head>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed">
+<header th:replace="fragments/header">
+</header>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T97D47X"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        setTimeout(function(){
+            $(document).find('.cookieinfo a').attr('target',"_blank");
+        },3000);
+    });
+</script>
+
+<script>
+    $tutorialName = '';
+    $costlabel = 'Coût';
+    $profitlabel = 'profit';
+    $closeToggleText = 'Tout cacher';
+    $openToggleText = 'Ouvrir tout';
+    $yesText = 'Oui';
+    $noText = 'Aucun';
+    $strongPasswordPopUp = 'Utilisez au moins 8 caractères & au plus 15 caractères. Utilisez au moins une majuscule, une minuscule. Utilisez des nombres et des caractères spéciaux (& ! % # @ (  ) $*) pour renforcer la sécurité de votre mot de passe,';
+    $exitText = 'Exit';
+    $dontShowText = 'Do not show it anymore';
+    $nextText = 'Next';
+    $exitText = 'Exit';
+    $serviceNotAvailable = "Service Not Available";
+    $serviceNotWarning = "Grande demande pour ce service pour les dates fixées et les heures. La disponibilité peut être limitée";
+    $pleaseAddOneProduct = "Add a product to the quote";
+    $clickOnQuoteBackText = "If you click back, the changes will not be saved. Do you want to discard the changes?";
+    $weekPassword = 'Weak';
+    $tooShortPassword = 'Too short';
+    $goodPassword = 'Good';
+    $strongPassword = 'Strong';
+    $discountprecentagemsg = "Rabais ne peut être supérieur à 100%";
+    $areyousuretoremoverow = "Do you want to delete this payment?";
+    $quoteupdatedsuccessmsg = "Quote saved";
+    $doyouwanttosendpaymentrecipt = "Do you want to send this payment receipt to the supplier?";
+    $doyouwanttosendpaymentnotification = "Do you want to send this payment notification?";
+    $authorizeAllProductBeforeSave = "Approve all lines";
+    $pleaseAddOneProductReq = "Add a product to the requisition";
+    $selectsubproduct = "Sub Products";
+    $saveProductText = "Mise à jour";
+    $showGuidePopup = false;
+    $showQuoteTemplateGuidePopup = false;
+    $currentmodule = '';
+    $showGuidePopup = false;
+
+    $showQuoteTemplateGuidePopup = false;
+
+    $(document).on('click', '.introjs-skipbutton', function () {
+        hideGuidePopup(0);
+    });
+
+</script>
+<script type="text/javascript">var $calenderClick;</script>
+
+<div class="main-container" id="main-container"><!--custHeight-->
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-container-inner">    <!--custHeight-->
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <!-- start: Main Menu -->
+        <div th:replace="fragments/sidebar">
+        </div>
+
+        <!-- end: Main Menu -->
+        <!--<div id="content" class="full">--><!--col-lg-10 col-sm-11 full-->
+        <div id="flashMessageDiv" class="hide">
+        </div>
+        <div id="errorFlashMessageDiv" class="hide">
+        </div>
+        <div class="main-content">
+            <div class="page-content">
+                <div class='row'>
+                    <div class="col-xs-12">
+                        <div class="row hr16">
+                            <div class="col-xs-12 ">
+                                <div class="col-xs-6 col-sm-4 no-padding-left hr4 tuto-step-1 addnewcustomerbutton">
+                                    <div class="col-xs-12 no-padding-left">
+                                        <a href="/customer/customerAdd" class="btn btn-xs btn-primary">
+                                            <i class="icon-plus"></i> Ajouter Client		                </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-offset-4 col-sm-4 col-xs-6">
+                                    <div class="col-sm-1">
+		            	<span class="help-button " data-trigger="hover"
+                              data-rel="tooltip" data-placement="bottom" title="Ceci est une fonctionnalité de recherche intelligente. Vous pouvez rechercher par - PRENOM, - NOM, - NOM DE L'ENTREPRISE, - EMAIL, - DEVIS ou NUMÉRO DE CONTRAT. When search is performed and selection has been made, simply click on the desired action [What do you want to do next?] . You will be taken directly to the module for the corresponding client unless no process is active for client.">?
+</span>
+
+                                        <script>
+                                            $(document).ready(function() {
+                                                $('[data-rel=tooltip]').tooltip({container:'body'});
+                                            });
+                                        </script>
+                                        <style>
+                                            .tooltip {z-index:10000!important;}
+                                        </style>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="input-group tuto-manage-lead-step-2 tuto-navigate-axis-step-6">
+                                            <input type="text" name="search" class="form-control search-query no-margin" id="searchAllCustomer" data-url="customer/auto-complete"
+                                                   placeholder="Rechercher ..." autocomplete="off" value="">
+                                            <span class="input-group-btn">
+									<button type="button" class="btn btn-primary btn-sm autocompleteSearch">
+			                        	<i class="icon-search icon-on-right bigger-110"></i>
+			                    	</button>
+			                	</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--<div class="col-sm-4">
+                                    <span role="button" class="btn btn-sm btn-warning pull-right">
+                                        <i class="icon-pencil"></i>
+                                    </span>
+                                </div>-->
+                            </div>
+                        </div>
+
+                        <!--graph code Start-->
+                        <div class="homepage_dataTables_wrapper">
+                            <div class="widget-box collapsed">
+                                <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse">
+                                    <h5><span class="help-button " data-trigger="hover"
+                                              data-placement="bottom" data-rel="tooltip"
+                                              title="Suivez ces 7 étapes pour démarrer avec votre compte axis en peu de temps. Le cercle deviendra VERT dès que vous avez terminé l'étape.">?
+</span>
+
+                                        <script>
+                                            $(document).ready(function() {
+                                                $('[data-rel=tooltip]').tooltip({container:'body'});
+                                            });
+                                        </script>
+                                        <style>
+                                            .tooltip {z-index:10000!important;}
+                                        </style>
+                                        Configuration initiale</h5>
+                                    <div class="widget-toolbar">
+                                        <a class="tuto-navigate-axis-step-10" href="#" toggle="crm">
+                                            <i class="icon-chevron-down bigger-110"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="widget-body firstblock">
+                                    <div class="row">
+                                        <div class='col-sm-1 col-xs-6 align-center tuto-navigate-axis-step-11'>
+                                            <div class="linkbox">
+                                                <a date-link='1' href="https://axiserp.com/merchant/biz-profile"
+                                                   target="_blank">Paramètres de l'entreprise</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='1' href="https://axiserp.com/merchant/biz-profile"
+                                                   target="_blank"><img src="/merchant-theme/img/icon_28.jpg"
+                                                                        style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-1 col-xs-6 align-center'>
+                                            <div class="linkbox">
+                                                <a date-link='2' href="https://axiserp.com/account/add" target="_blank">Ajouter
+                                                    des comptes bancaires et des comptes d'entreprise</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='2' href="https://axiserp.com/account/add" target="_blank"><img
+                                                        src="/merchant-theme/img/icon_22.jpg" style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-1 col-xs-6 align-center'>
+                                            <div class="linkbox">
+                                                <a date-link='3' href="https://axiserp.com/quote/title" target="_blank">Description
+                                                    date et de l'heure</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='3' href="https://axiserp.com/quote/title" target="_blank"><img
+                                                        src="/merchant-theme/img/icon_23.jpg" style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-1 col-xs-6 align-center'>
+                                            <div class="linkbox">
+                                                <a date-link='4' href="https://axiserp.com/setup/add" target="_blank">Ajouter
+                                                    de nouvelles valeurs<br/>[Kg, Lt, Hours etc.]</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='4' href="https://axiserp.com/setup/add"
+                                                   target="_blank"><img src="/merchant-theme/img/icon_24.jpg"
+                                                                        style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-1 col-xs-6 align-center'>
+                                            <div class="linkbox">
+                                                <a date-link='5' href="https://axiserp.com/supplier/add"
+                                                   target="_blank">Ajouter Fournisseur</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='5' href="https://axiserp.com/supplier/add"
+                                                   target="_blank"><img src="/merchant-theme/img/icon_25.jpg"
+                                                                        style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-1 col-xs-6 align-center'>
+                                            <div class="linkbox">
+                                                <a date-link='6' href="https://axiserp.com/product/add" target="_blank">Ajouter
+                                                    vos articles</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='6' href="https://axiserp.com/product/add" target="_blank"><img
+                                                        src="/merchant-theme/img/icon_26.jpg" style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-1 col-xs-6 align-center'>
+                                            <div class="linkbox">
+                                                <a date-link='7' href="https://axiserp.com/employee/add"
+                                                   target="_blank">Ajouter des employés, des ressources et des
+                                                    utilisateurs</a>
+                                            </div>
+                                            <div class="home-icon-100-100">
+                                                <a date-link='7' href="https://axiserp.com/employee/add"
+                                                   target="_blank"><img src="/merchant-theme/img/icon_27.jpg"
+                                                                        style="width:100%"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--graph code End-->
+                        <div class="homepage_dataTables_wrapper">
+                            <div class="widget-box homeScreenCharts">
+                                <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse">
+                                    <h5>Que voulez-vous faire après ?</h5>
+                                </div>
+                                <div class="widget-body middleblock" style="display:block!important">
+                                    <h1 class="align-center" style="color:#428bca;padding-bottom: 25px;font-weight: bold">Que voulez-vous faire après ?</h1>
+                                    <div class="row">
+                                        <div class="col-xs-12 tuto-navigate-axis-step-7">
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a class="create_customer" href="/customer/customerAdd"><img src="/merchant-theme/img/icon_37.jpg" style="width:100%"></a>
+                                                </div>
+                                                <div>
+                                                    <a class="create_customer" href="/customer/customerAdd">Ajouter Client</a>
+                                                </div>
+                                            </div>
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a class="create_quote" href="javascript:void(0)">
+                                                        <img src="/merchant-theme/img/icon_2.jpg" style="width:100%">
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="create_quote" href="javascript:void(0)">Créer un devis</a>
+                                                </div>
+                                            </div>
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a class="view_quote" href="javascript:void(0)">
+                                                        <img src="/merchant-theme/img/icon_38.jpg" style="width:100%">
+                                                    </a>
+                                                    <a class="edit_quote" href="javascript:void(0)">Voir Devis</a>
+                                                </div>
+                                            </div>
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a class="edit_quote" href="javascript:void(0)">
+                                                        <img src="/merchant-theme/img/icon_36.jpg" style="width:100%">
+                                                    </a>
+                                                    <a class="edit_quote" href="javascript:void(0)">Editer un Devis</a>
+                                                </div>
+                                            </div>
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a class="create_invoice" href="javascript:void(0)"><img src="/merchant-theme/img/icon_3.jpg" style="width:100%"></a>
+                                                </div>
+                                                <div>
+                                                    <a class="create_invoice" href="javascript:void(0)">Créer une facture</a>
+                                                </div>
+                                            </div>
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a class="collect_payment" href="javascript:void(0)"><img src="/merchant-theme/img/icon_4.jpg" style="width:100%"></a>
+                                                </div>
+                                                <div>
+                                                    <a class="collect_payment" href="javascript:void(0)">Percevoir un paiement</a>
+                                                </div>
+                                            </div>
+
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a href="https://axiserp.com/product/add"><img
+                                                            src="/merchant-theme/img/icon_11.jpg"
+                                                            style="width:100%"></a>
+                                                </div>
+                                                <div>
+                                                    <a href="https://axiserp.com/product/add">Ajouter vos articles</a>
+                                                </div>
+                                            </div>
+                                            <div class='col-sm-2 col-xs-6 align-center' style="min-height: 174px;">
+                                                <div class="home-icon-100-100">
+                                                    <a href="https://axiserp.com/quote-template"><img
+                                                            src="/merchant-theme/img/icon_10.jpg"
+                                                            style="width:100%"></a>
+                                                </div>
+                                                <div>
+                                                    <a href="https://axiserp.com/quote-template">Sélectionnez un modèle
+                                                        Devis/Facture</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .widget-body {padding:20px 0px;}
+                </style>
+                <input type="hidden" name="customerId" id="customerId" value="">
+                <input type="hidden" name="quoteId" id="quoteId" value="">
+                <input type="hidden" name="customerType" id="customerType" value="">
+                <!-- Start Toky -->
+                <script>
+                    $(document).ready(function(){
+                        if($showQuoteTemplateGuidePopup == true) {
+                            startQuoteTemplateIntro1();
+                        } else if($showGuidePopup == true && (typeof Cookies.get("startGuideTutorial") == 'undefined' || Cookies.get("startGuideTutorial") == '') && 0 ==  "11") {
+                            startQIntro1();
+                        } else if(Cookies.get("startGuideTutorial") == '2' || 0 == '2') {
+                            startManageLeadIntro2();
+
+                        }
+                        if(Cookies.get("startGuideTutorial") == '3' || 0== '3') {
+                            introJs().exit();
+                            startNIntro1();
+                        }
+
+                        $('body').on('click', '.tuto-navigate-axis-step-10', function () {
+                            introJs().exit();
+                            if(Cookies.get("startGuideTutorial") == '3' || $tutorialName == '3' || 0== '3') {
+                                setTimeout(function(){
+                                    startNIntro2();
+                                }, 500);
+                            }
+                        });
+
+                        $('.autocompleteSearch').click(function(){
+                            if($('#searchAllCustomer').val() != '') {
+                                showLoader();
+                                window.location.href = "/crm/index?search="+$('#searchAllCustomer').val();
+                            }
+                        })
+                    });
+                </script>
+                <!-- End Toky -->
+                <script type="text/javascript" src="/js/graph/html2canvas.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+                <script type="text/javascript" src="/js/custom/merchant.js?98ca4c5ff2a8a1032920d977947f6537"></script>	                        <br/>
+                <footer th:replace="fragments/footer">
+                </footer>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
+
+    <div id="custPageLoader" class="hide">
+        <!--<h3>Loading...</h3>-->
+        <h3 class="smaller custom-center lighter grey">
+            <div class="custom-inner-center">
+                <!--<i class="icon-spinner icon-spin white bigger-175"></i><br /><br />-->
+                <img src="/img/action_animation.gif" style="width:100px"><br /><br />
+                <span class="loading_text"></span>
+            </div>
+        </h3>
+    </div>
+</div> <!-- /container -->
+<a href="#" target="_blank" id="clickEventCalender"></a>
+<!-- Scripts -->
+<script type="text/javascript">
+    if("ontouchend" in document) document.write("<script src='/merchant-theme/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    var BASEURL = '';
+    var CURRENT_LANGUAGE;
+</script>
+
+<script>
+    LANG_DIRECTORY = 'FR';
+    //CURRENT_LANGUAGE = 'fr';
+    CURRENT_LANGUAGE = 'en';
+    var slides_descriptions = new Array();
+    var slides_titles = new Array();
+    slides_titles[0] = "Bienvenue";
+    slides_titles[1] = "Configuration initiale";
+    slides_titles[2] = "Liens rapides";
+    slides_titles[3] = "Main Home Screen";
+    slides_titles[4] = "Module menu";
+    slides_titles[5] = "Business configuration menu an Calendars";
+    slides_titles[6] = "Top notification bar";
+    slides_titles[7] = "Profil";
+
+</script>
+
+<!--[if lte IE 8]><script type="text/javascript" src="/merchant-theme/js/excanvas.min.js?98ca4c5ff2a8a1032920d977947f6537"></script><![endif]-->
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/jquery.ui.touch-punch.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/fullcalendar.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/jquery.autosize.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/chosen.jquery.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/date-time/bootstrap-datepicker.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/date-time/bootstrap-timepicker.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/js/jquery.gritter.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/js/jquery.numeric.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/js/custom/mer_autocomplete.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/js/jquery.cookie.min.js?20170810"></script>
+<script type="text/javascript" src="/merchant-theme/js/ace-elements.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<script type="text/javascript" src="/merchant-theme/js/ace.min.js?98ca4c5ff2a8a1032920d977947f6537"></script><script type="text/javascript" src="/merchant-theme/js/date-time/locales/bootstrap-datepicker.fr.js?98ca4c5ff2a8a1032920d977947f6537"></script>                 <script type="text/javascript">
+    $(function(){
+        $('.homeScreenCharts').addClass('collapsed');
+    });
+</script>
+
+<!-- Alert Message -->
+<div id="alertSuccessMessage" class="modal fade" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-success">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Notification</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="basicsetuppopup" class="modal fade" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content" style="color:#666;">
+            <div class="modal-header alert alert-success" style="height: 46px;">
+                <button type="button" class="close" style="font-size: 24px;" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center" style="max-width:690px;margin:0 auto;">
+                <h2 style="margin-top:0px;font-weight:bold;">WAY TO GO!!</h2>
+                <h5 style="font-size:20px;">Your account has been customized for <strong>“AXIS DEVELOPMENT IT”</strong></h5>
+                <div style="font-size:16px;margin-top:30px;margin-bottom:30px">Check your email!! <strong>YOU GOT A SAMPLE QUOTE ON YOUR INBOX.</strong></div>
+                <div><h2 style="line-height:30px;margin-bottom:0px;font-weight:28px;font-weight:bold;">Vous avez une question?</h2></div>
+                <div><h5 style="font-size:20px;">Chat and say HI to one of our Consultants <a href="#" onclick="startAssistanceButton()">HERE</a></h5></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert Message -->
+<div id="alertErrorMessage" class="modal fade" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-danger">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Avis</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delet alert Message -->
+<div id="deleteConfirmMessageBox" class="modal fade" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Effacer</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn btn-default" id="process_delete">Oui</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Aucun</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Delet alert Message -->
+<div id="deleteAjaxConfirmMessageBox" class="modal fade" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Effacer</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn btn-default" id="process_delete_ajax">Oui</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Aucun</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Other Confirm Message -->
+<div id="confirmMessageBox" class="modal fade" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Confirmation Required</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer" id="modal-footer-0" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-1" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes1()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo1()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-2" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes2()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo2()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-3" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes3()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo3()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-4" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes4()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo4()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-5" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes5()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo5()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-6" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYes6()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNo6()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-Mc" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYesMc()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNoMc()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-Mcc" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYesMcc()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNoMcc()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-Qqb" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYesQqb()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNoQqb()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-crm6" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYescrm6()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNocrm6()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-setup" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYesSetup()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNoSetup()">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-deletecard" style="display: none">
+                <button type="button" class="btn btn-default" onclick="confirmValueYesDeletecard()">Oui</button>
+                <button type="button" class="btn btn-default" onclick="confirmValueNoDeletecard()">Aucun</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    setTimeout('systemCheckLoginTime()', 1200000);
+    function systemCheckLoginTime() {
+        $.ajax({
+            method: 'get',
+            url: '/user/kill-session?checksession=true',
+            success: function($data) {
+                $result = getJsonData($data);
+                if($result.action == 'logout') {
+                    window.location = '/user/logout';
+                }
+                setTimeout('systemCheckLoginTime()', 1200000);
+            }
+        });
+    }
+
+    $('.doNotDisplayReminder').click(function(){
+        if($(this).prop('checked')) {
+            $displayReminder = 'No'
+        } else {
+            $displayReminder = 'Yes';
+        }
+        $reminderId = $(this).attr('data-id');
+        showLoader();
+        $.ajax({
+            method: 'get',
+            url: '/crm/add-reminder?reminderId='+$reminderId+'&displayReminder='+$displayReminder,
+            success: function($data) {
+                hideLoader();
+                //$result = getJsonData($data);
+            }
+        });
+    });
+</script>
+<style>
+
+
+
+</style>
+<script type="text/javascript">
+    $('#faq_search_btn').click(function(){
+        $dataUrl = 'https://axiscloud.freshdesk.com/support/search/solutions?term=' + $('#faq_search').val();
+        window.open($dataUrl);
+    })
+
+    $('#faq_search').keypress(function (e) {
+        var key = e.which;
+        if(key == 13)  // the enter key code
+        {
+            $dataUrl = 'https://axiscloud.freshdesk.com/support/search/solutions?term=' + $('#faq_search').val();
+            window.open($dataUrl);
+        }
+    });
+</script>
+<!-- <div id="freshwidget-button" style="display: none; top: 50%;" class="freshwidget-button fd-btn-right"><a href="/user/notification" class="freshwidget-theme" style="color: black; background-color: rgb(36, 177, 255); border-color: black;">Support</a></div> -->
+
+<script>
+    $thisfieldrequired = 'Ce champ est obligatoire';
+    $paymentDonotAdd = 'The payments entered do not add up to the total owe. Correct the amount or add a programmed payment.';
+    $remoteemsg='Veuillez corriger ce champ. ';
+    $emailemsg='Veuillez saisir une addresse email valide';
+    $urlemsg='Veuillez saisir une URL valide';
+    $dateemsg='Veuillez saisir une date valide';
+    $dateISOemsg='Veuillez saisir une date valide (ISO)'
+    $numberemsg='Veuillez saisir un numéro valide'
+    $digitsemsg='Veuillez saisir des chiffres uniquement';
+    $creditcardemsg='Veuillez saisir un numéro de carte de crédit valide';
+    $equalToemsg='Veuillez saisir la même valeur à nouveau';
+    $maxlengthemsg='Veuillez ne saisir que {0} caractère(s)';
+    $minlengthemsg='Veuillez saisir au moins {0} caractère(s)';
+    $rangelengthemsg='Veuillez saisir une valeur ayant une longueur de caractères entre {0} et {1}';
+    $rangeemsg='Veuillez saisir une valeur entre {0} et {1}.';
+    $maxemsg='Veuillez saisir une valeur inférieure ou égale à {0}.';
+    $minemsg='Veuillez saisir une valeur supérieure ou égale à {0}.';
+    $nextpaymentword='Prochain paiement';
+    $addProductTextWord='Ajouter';
+    $requiredErrorMessage = "Obligatoire";
+    $gradTotalrequiredErrorMessage = "Le grand total n'est pas égal à l'accord de paiement";
+    $recordsText = "Display _MENU_";
+    $showingPages = "";
+    $noRecordAvailable = "No records available";
+    $nothingFound = "No records available";
+    $therearenotrecords = "There are no results.";
+</script>
+
+<!-- Modal -->
+<div id="myMessageModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="myMessageTitle">Message</h4>
+            </div>
+            <div class="modal-body" id="myMessageText">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="systemProgress" style="display:none">
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">40%</div>
+    </div>
+</div>
+
+<script>
+    function showMessage(id,obj) {
+        $(obj).attr('style','font-size:13px;color:#000;');
+        //window.open("/merchant/communication-message/"+id);
+        showLoader();
+        $.ajax({
+            method: 'post',
+            url: '/merchant/communication-message',
+            data: 'fetch=true&communication_id='+id,
+            success: function($data) {
+                $result = getJsonData($data);
+                $('#myMessageTitle').text($result.subject);
+                $('#myMessageText').html($result.text);
+                $('#communicationCounts').text($result.countText);
+                $('#communicationHelper').text($result.count);
+
+                $('#myMessageModal').modal({
+                    show: true
+                });
+                hideLoader();
+            }
+        });
+    }
+
+    $fetchNewUnreadMessage = false;
+
+    function fetchNewUnreadMessage() {
+        showLoader();
+        $('.loading_text').html('<img src="/img/search_email.gif" style="width:150px;"><br /><br />We are checking for any unread email. Bear with us while we do this.<br /><br /><button type="button" class="btn btn-danger cancel_loading" onclick="hideLoader();">Annuler</button>');
+        if($fetchNewUnreadMessage == false) {
+            $fetchNewUnreadMessage = true;
+            //window.open("/merchant/communication-message/"+id);
+            $.ajax({
+                method: 'post',
+                url: '/merchant/communication-message',
+                data: 'emailFetch=true',
+                success: function($data) {
+                    $result = getJsonData($data);
+                    $('#emailNotifications').html($result);
+                    $fetchNewUnreadMessage = false;
+                    $('#emailNotifications').trigger('click');
+                    hideLoader();
+                }
+            });
+        }
+    }
+
+
+    $('.loadUnreadEmails').click(function(){
+        fetchNewUnreadMessage();
+    })
+
+    function markAsCompleteFollowUp(followupid,obj) {
+        if($(obj). prop("checked") == true){
+            showLoader();
+            $.ajax({
+                url: '/crm?actionType=unselectfollowup&followUpId='+followupid,
+                type: 'get',
+                success: function($result) {
+                    $data = getJsonData($result);
+                    $(obj).parent().parent().parent().remove();
+                    $('#followupHelper').html($('#followupHelper').text() - 1);
+                    hideLoader();
+                    //window.location.href=$redirectLink;
+                },
+                error: function($error) {
+                    console.log($error);
+                    hideLoader();
+                },
+                complete: function() {
+                    hideLoader();
+                }
+            });
+        }
+    }
+
+    $('#allNotificatinoRead').click(function(){
+        showLoader();
+        $.ajax({
+            url: '/merchant/mark-read-all-notification',
+            type: 'get',
+            success: function($result) {
+                $('#notificationCounts').html('0 notification');
+                $('#notificationHelper').html('0');
+                $('.notificationlistul li a').css('font-weight','normal');
+                hideLoader();
+            },
+            error: function($error) {
+                console.log($error);
+                hideLoader();
+            },
+            complete: function() {
+                hideLoader();
+            }
+        });
+    });
+    function selectQuestionCheckbox(object) {
+        if(object.value != '') {
+            jQuery(object).parent().parent().find('.checkAll').prop('checked',true);
+        } else {
+            jQuery(object).parent().parent().find('.checkAll').prop('checked',false);
+        }
+    }
+    function hideHelpPopup($val){
+        introJs().exit();
+        showLoader();
+        $.ajax({
+            url: '/merchant',
+            method: 'post',
+            data: {"hideHelpPopup":1,'helpId':$val},
+            success: function($result) {
+                hideLoader();
+                $showQuoteTemplateGuidePopup = false;
+            },
+            error: function($error) {
+
+            },
+            complete: function() {
+                hideLoader();
+            }
+        });
+    }
+
+    function hideGuidePopup($val,tutorial_name){
+        introJs().exit();
+        showLoader();
+        $.ajax({
+            url: '/merchant',
+            method: 'post',
+            data: {"hideGuidePopup":1,'rating':$val,'tutorial_name':tutorial_name},
+            success: function($result) {
+                hideLoader();
+                if($val > 0) {
+                    //$.cookie("startGuideTutorial",'',{ path: '/', expires: 1 });
+                    Cookies.set('startGuideTutorial', '');
+                    Cookies.remove('startGuideTutorial');
+                    showGuidePopup();
+                } else {
+                    //$.cookie("startGuideTutorial",'',{ path: '/', expires: 1 });
+                    Cookies.set('startGuideTutorial', '');
+                    Cookies.remove('startGuideTutorial');
+                }
+            },
+            error: function($error) {
+
+            },
+            complete: function() {
+                hideLoader();
+            }
+        });
+    }
+    //$('#basicsetuppopup').modal('show');
+    function startQuoteTemplateIntro1(){
+        $('#basicsetuppopup').modal('hide');
+        var quoteTemplateIntro1 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"showButtons":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+        quoteTemplateIntro1.setOptions({
+            steps: [
+                {
+                    intro: '<div class="text-center"><h1>Hello Tahar Al,</h1><br />Welcome to axis Cloud. Before you start exploring, <strong>  do you want to design your 1st quote template?</strong><div style="margin-top:10px;" class="start_quote_template_intro"><a href="/quote-template/add" class="btn btn-sm btn-primary">Start</button></div><div style="margin-top:20px;" class="later-quote-template-wrapper"><a href="#" class="noThanksWillDoLaterQuoteTemplate">Plus tard</a></div></div>'
+                }
+            ]
+        });
+        quoteTemplateIntro1.start();
+        jQuery('.introjs-tooltip').addClass('intro-dark-theme');
+    }
+
+    function startQIntro1(){
+        jQuery('.introjs-tooltip').removeClass('intro-dark-theme');
+        var intro1 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"showButtons":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+        intro1.setOptions({
+            steps: [
+                {
+                    intro: "<div class='text-center'><h3 class='green'>Welcome Tahar Al</h3>These guided tutorial will show you <strong>HOW</strong> to <strong>create a quote, manage leads and navigate axis</strong>. Ready? <div style='margin-top:10px;' ><button class='btn btn-sm btn-primary moveToNextHelp'>Go</button></div><div style='margin-top:20px;'><a href='#' class='noThanksWillDoLater'>No thanks, I'll do it later</a></div></div>"
+                }
+            ]
+        });
+        intro1.start();
+    }
+
+    function startQIntro2(){
+        var intro2 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"showButtons":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+        intro2.setOptions({
+            steps: [
+                {
+                    element: document.querySelector('.tuto-step-1'),
+                    intro: "Click here to create a NEW CLIENT<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                }
+            ]
+        });
+        intro2.start();
+    }
+
+    function startQIntro3(){
+        var intro3 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"showButtons":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+        intro3.setOptions({
+            steps: [
+                {
+                    intro: "<div class='text-center'><h3 class='green'>3 Tutorials for you!</h3>Select what would you like to learn first<br /><br /><button style='margin-top:20px;margin-left:10px;' class='btn btn-sm btn-primary tuto_navigate_axis_button'>Navigate axis</button><button style='margin-top:20px;margin-left:10px;' class='btn btn-sm btn-primary tuto_create_quote_button'>Create a Quote</button><button style='margin-top:20px;margin-left:10px;' class='btn btn-sm btn-primary tuto_manage_lead_button'>Manage Lead</button><div style='margin-top:20px;'	><a href='#' class='noThanksWillDoLater'>No thanks, I'll do it later</a></div><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                }
+            ]
+        });
+        intro3.start();
+    }
+
+    function startManageLeadIntro2(){
+        var intro2 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"showButtons":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+        intro2.setOptions({
+            steps: [
+                {
+                    element: document.querySelector('.tuto-manage-lead-step-1'),
+                    intro: "Click here to create a NEW LEAD<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                }
+            ]
+        });
+        intro2.start();
+    }
+
+    function startManageLeadIntro3(){
+        var intro3 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+        intro3.setOptions({
+            steps: [
+                {
+                    element: document.querySelector('.tuto-manage-lead-step-2'),
+                    intro: "<strong>Let\'s search a lead</strong>. Start by typing the name of the lead you just created and select it from the list.  <div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                },
+                {
+                    element: document.querySelector('.tuto-manage-lead-step-3'),
+                    intro: "Now click here and it will take you directly to the lead page<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                }
+            ]
+        });
+        intro3.start();
+    }
+
+    function startNIntro1(){
+        var intron1 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"exitOnOverlayClick": false,"exitOnEsc": false}).oncomplete(function(){startNIntro2();});
+        intron1.setOptions({
+            steps: [
+                {
+                    intro: "Hi,<br /><br />I will show you how to navigate axis Cloud, and most importantly, <strong>we will configure your business in axis together.</strong> After we are done, you can start using axis Cloud for your sales activities like managing leads and sending professional quotes. <br/ ><br /><div style='text-align:center'>Ready?</div><br /><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-1'),
+                    intro: "Here you have access to your SALES MODULES<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'right'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-2'),
+                    intro: "Here you'll find the main axis Cloud setup and catalog menus.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'right'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-3'),
+                    intro: "These are your different calendars where you can view quotes, contracts, products, programmed payments, and agenda.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'right'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-4'),
+                    intro: "<strong>This section will come really handy</strong>. Here you can view your to-do list, reminders, product notifications, internal messages, and your client's interactions with the quotes.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'bottom'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-5'),
+                    intro: "Here you can update your user profile and password. You can as well <strong>integrate your email account to send and receive</strong> emails from axis Cloud. <div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'left'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-6'),
+                    intro: "In this search box you can look for leads and clients. You can as well view clients with quotes and contracts.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'left'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-7'),
+                    intro: "When you have performed a search and select a lead or client, <strong>here a direct action can be done</strong>, like work on the lead, edit quote, create invoice, etc…<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'top'
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-8'),
+                    intro: "Click here to open. From here you have easy access to axis setup, guides, and tutorials.  <div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'left'
+                },
+                {
+                    intro: "I have finished showing you around axis. <strong>Now let's customize axis Cloud to your business</strong>.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                },
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-10'),
+                    intro: "Click here to guide you through the customization steps. <div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'left'
+                }
+            ]
+        });
+        intron1.start();
+    }
+    function startNIntro2(){
+        var intron2 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"exitOnOverlayClick": false,"exitOnEsc": false}).oncomplete(function(){startNIntro2();});
+        intron2.setOptions({
+            steps: [
+                {
+                    element: document.querySelector('.tuto-navigate-axis-step-11'),
+                    intro: "Let's start by customizing your business profile.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                    position:'right'
+                }
+            ]
+        });
+        intron2.start();
+    }
+    $('body').on('click','.tuto_create_quote_button',function(){
+        introJs().exit();
+        //$.cookie("startGuideTutorial", '1',{ path: '/', expires: 1 });
+        Cookies.set('startGuideTutorial', '1');
+        if($('.tuto-step-1').hasClass('addnewcustomerbutton')) {
+            startQIntro2();
+        } else {
+            window.location.href = '/customer/customerAdd';
+        }
+    });
+    $('body').on('click','.moveToNextHelp',function(){
+        introJs().exit()
+        startQIntro3();
+    });
+    $('body').on('click','.noThanksWillDoLater',function(){
+        hideGuidePopup('0','');
+    });
+    $('body').on('click','.noThanksWillDoLaterThumbUp',function(){
+        var tutorial_name = $(this).attr('data-value');
+        hideGuidePopup('1',tutorial_name);
+    });
+    $('body').on('click','.noThanksWillDoLaterThumbDown',function(){
+        var tutorial_name = $(this).attr('data-value');
+        hideGuidePopup('2',tutorial_name);
+    });
+    $('body').on('click','.noThanksWillDoLaterQuoteTemplate',function(){
+        hideHelpPopup('3','');
+    });
+
+    /****** Manage Lead *********/
+    $('body').on('click','.tuto_manage_lead_button',function(){
+        //$.cookie("startGuideTutorial", '2',{ path: '/', expires: 1 });
+        Cookies.set('startGuideTutorial', '2');
+        introJs().exit()
+        if($('.tuto-manage-lead-step-1').hasClass('addnewleadbutton')) {
+            startManageLeadIntro2();
+        } else {
+            window.location.href = '/merchant?tutorial=2';
+        }
+
+    });
+
+    $('body').on('click', '.tuto_navigate_axis_button', function () {
+        introJs().exit();
+        //$.cookie("startGuideTutorial", '3',{ path: '/', expires: 1 });
+        Cookies.set('startGuideTutorial', '3');
+        $tutorialName = '3';
+        if($('.tuto-step-1').hasClass('addnewcustomerbutton')) {
+            startNIntro1();
+        } else {
+            window.location.href = '/merchant?tutorial=3';
+        }
+    });
+
+    function showGuidePopup(){
+        $('#basicsetuppopup').modal('hide');
+        showLoader();
+        $.ajax({
+            url: '/merchant',
+            method: 'post',
+            data: {"showGuidePopup":1},
+            success: function($result) {
+                hideLoader();
+            },
+            error: function($error) {
+
+            },
+            complete: function() {
+                hideLoader();
+                //startIntro1();
+                startQIntro1();
+            }
+        });
+    }
+
+    function displayAlertMessage($msg) {
+        $('#alertSuccessMessage .modal-body').html($msg);
+        $('#alertSuccessMessage').modal({backdrop: "static"});
+    }
+
+    function displayErrorMessage($msg) {
+        $('#alertErrorMessage .modal-body').html($msg);
+        $('#alertErrorMessage').modal({backdrop: "static"});
+    }
+    var $deleteAjaxObject;
+    function deleteAjaxConfirmMessageBox($obj,$msg) {
+        $('#deleteAjaxConfirmMessageBox .modal-body').html($msg);
+        $('#deleteAjaxConfirmMessageBox').modal({backdrop: "static"});
+        $deleteAjaxObject = $obj;
+        $('#process_delete_ajax').attr('data-href',$($obj).attr('data-href'));
+        return false;
+    }
+
+    function deleteConfirmMessageBox($obj,$msg) {
+        $('#deleteConfirmMessageBox .modal-body').html($msg);
+        $('#deleteConfirmMessageBox').modal({backdrop: "static"});
+        $('#process_delete').attr('data-href',$($obj).attr('href'));
+        return false;
+    }
+
+    function confirmMessageBox($obj,$msg,msgBoxNumber) {
+        $('#confirmMessageBox .modal-body').html($msg);
+        $('#confirmMessageBox .modal-footer').hide();
+        if(msgBoxNumber == '0') {
+            $('#confirmMessageBox #modal-footer-0').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == '1') {
+            $('#confirmMessageBox #modal-footer-1').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == '2') {
+            $('#confirmMessageBox #modal-footer-2').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == '3') {
+            $('#confirmMessageBox #modal-footer-3').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == '4') {
+            $('#confirmMessageBox #modal-footer-4').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == '5') {
+            $('#confirmMessageBox #modal-footer-5').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == '6') {
+            $('#confirmMessageBox #modal-footer-6').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == 'Mc') {
+            $('#confirmMessageBox #modal-footer-Mc').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == 'Mcc') {
+            $('#confirmMessageBox #modal-footer-Mcc').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == 'Qqb') {
+            $('#confirmMessageBox #modal-footer-Qqb').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == 'crm6') {
+            $('#confirmMessageBox #modal-footer-crm6').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == 'setup') {
+            $('#confirmMessageBox #modal-footer-setup').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        if(msgBoxNumber == 'deletecard') {
+            $('#confirmMessageBox #modal-footer-deletecard').show();
+            $('#confirmMessageBox').modal({backdrop: "static"});
+        }
+        return false;
+    }
+
+    $('#process_delete').click(function(){
+        showLoader();
+        $('#deleteConfirmMessageBox').modal('hide');
+        window.location.href = $(this).attr('data-href');
+    })
+
+    $('#process_delete_ajax').click(function(){
+        showLoader();
+        $('#deleteAjaxConfirmMessageBox').modal('hide');
+        $.ajax({
+            method: 'get',
+            url: $(this).attr('data-href')+"?ajax=1",
+            success: function($data) {
+                hideLoader();
+                $($deleteAjaxObject).closest('tr').remove();
+            }
+        });
+
+    })
+
+
+
+    $('.needAssistanceButton').click(function() {
+        window.open("https://tawk.to/chat/55ad10d529ac8aa7323698f7/default/?$_tawk_popout=true", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400")
+    });
+    function startAssistanceButton(){
+        //$('#basicsetuppopup').modal('hide');
+        window.open("https://axiscloud.com/consultants", "_blank")
+    }
+    $('.backMessage').click(function(){
+        deleteConfirmMessageBox(this,$clickOnQuoteBackText);
+        return false;
+    })
+
+    $('.hideShowSideBar').click(function(){
+        if($('.sidebar').is(':visible')) {
+            hideSideBar();
+        } else {
+            showSideBar();
+        }
+    })
+
+    function hideSideBar() {
+        $('.sidebar').hide();
+        $('.navbar').css('margin-left','0px');
+        $('.main-content').css('margin-left','0px');
+    }
+
+    function showSideBar() {
+        $('.sidebar').show();
+        $('.navbar').css('margin-left','190px');
+        $('.main-content').css('margin-left','0px');
+    }
+</script>
+
+</html>
+

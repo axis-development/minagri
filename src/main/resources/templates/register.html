@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <title>Migration Easy</title>
+
+
+    <link href="/vendors/coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="/vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+
+</head>
+<body class="app flex-row align-items-center">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mx-4">
+                <div class="card-body p-4">
+                    <h1>Register</h1>
+                    <p class="text-muted">Create your account</p>
+
+                    <form action="" class="configForm" id="insertForm" method="post">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                                  <span class="input-group-text">
+                                                    <i class="icon-user"></i>
+                                                  </span>
+                            </div>
+                            <input class="form-control firstName" data-msg-firstName="Please enter the First name"
+                                   data-msg-required="Please enter the First name" data-rule-firstName="true"
+                                   data-rule-required="true"
+                                   id="firstName"
+                                   name="firstName"
+                                   placeholder="First Name" type="text">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                  <span class="input-group-text">
+                  <i class="icon-user"></i>
+                  </span>
+                            </div>
+                            <input id="lastName" class="form-control lastName"
+                                   name="lastName" data-rule-required="true" data-rule-lastName="true"
+                                   data-msg-required="Please enter the Last name"
+                                   data-msg-lastName="Please enter the Last name"
+                                   placeholder="Last Name" type="text">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                  <span class="input-group-text">
+                  <i class="icon-user"></i>
+                  </span>
+                            </div>
+                            <input id="userName" class="form-control userName"
+                                   name="userName" data-rule-required="true" data-rule-userName="true"
+                                   data-msg-required="Please enter the User name"
+                                   data-msg-userName="Please enter the User name"
+                                   placeholder="User Name" type="text">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input id="email" class="form-control email"
+                                   name="email" data-rule-required="true" data-rule-email="true"
+                                   data-msg-required="Please enter the Email"
+                                   data-msg-email="Please enter the Email"
+                                   type="email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                      <span class="input-group-text">
+                      <i class="icon-lock"></i>
+                      </span>
+                            </div>
+                            <input id="password" class="form-control password"
+                                   name="password" data-rule-required="true" data-rule-password="true"
+                                   data-msg-required="Please enter the Password"
+                                   data-msg-password="Please enter the Password"
+                                   placeholder="Password" type="password">
+                        </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                      <span class="input-group-text">
+                      <i class="icon-lock"></i>
+                      </span>
+                            </div>
+                            <input id="matchingPassword" class="form-control matchingPassword"
+                                   name="matchingPassword" data-rule-required="true" data-rule-matchingPassword="true"
+                                   data-msg-required="Please enter the Match Password"
+                                   data-msg-password="Please enter the Match Password"
+                                   placeholder="Confirm password" type="password">
+                            <span id="globalError" class="alert alert-danger col-sm-4" style="display:none"></span>
+                        </div>
+                        <input class="btn btn-block btn-success" id="insertField" type="submit"
+                               value="Create Account"/>
+
+                    </form>
+                    <div class="card-footer p-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-block btn-facebook" type="button">
+                                    <span>facebook</span>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-block btn-twitter" type="button">
+                                    <span>twitter</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/vendors/jquery/js/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="/vendors/popper.js/js/popper.min.js"></script>
+<script src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendors/pace-progress/js/pace.min.js"></script>
+<script src="/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+<script src="/vendors/bootstrap-notify-master/bootstrap-notify.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/vendors/coreui/coreui-pro/js/coreui.min.js"></script>
+
+<script src="/js/pwstrength.js"></script>
+<script src="/js/register.js"></script>
+
+</body>
+
+<!-- Mirrored from coreui.io/demo/dark/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Jan 2019 20:39:32 GMT -->
+</html>

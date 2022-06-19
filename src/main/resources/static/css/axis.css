@@ -1,0 +1,115 @@
+.hide-all {
+position:fixed;
+height:100%;
+width:100%;
+top:0;
+right:0;
+background:rgba(0,0,0,0.5);
+z-index:9998
+}
+#tuto-container {
+position:fixed;
+z-index:9999;
+top:-300px;
+opacity:0;
+right:50%;
+margin-right:-300px;
+width:100%;
+max-width:650px;
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out;
+background:#fff;
+padding-bottom:10px;
+}
+.active-pop-up {
+opacity:1!important;
+top:10px!important;
+}
+#tuto-container .tuto-content {
+position:relative;
+min-height:300px;
+border-radius:8px;
+text-align:center;
+color: #000!important;
+font-size: 14px!important;
+padding:10px 0px;
+}
+#tuto-container .tuto_action_buttons {
+	position:relative;
+}
+#tuto-container .tuto-content button {
+	/*bottom:30px;*/
+}
+#tuto-container .tuto-content img{
+max-width:100%;
+margin-bottom:20px;
+}
+
+#tuto-container .slide_description {
+	background:#428bca;
+	color:#fff;
+	text-align:left;
+	padding:10px;
+	margin-bottom:10px;
+}
+
+@media all and (max-width:610px) {
+#tuto-container {
+margin:0;
+right:0;
+}
+#tuto-container .tuto-content button {
+bottom: 22px!important;
+}
+}
+
+@media all and (max-height:800px) {
+	#tuto-container {
+		position: absolute;
+	}
+}
+
+
+.btn1 {
+    background-image: none !important;
+    border: 5px solid #fff;
+    border-radius: 0;
+    box-shadow: none !important;
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;    
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.15s ease 0s;
+    vertical-align: middle;
+}
+.btn1 {
+    -moz-user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.errordiv {
+    height: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: small;
+    color: red;
+}
+
+form.insertForm label.error, label.error {
+    color: red;
+    font-style: italic;
+}

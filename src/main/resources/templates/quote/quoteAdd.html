@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="https://axiserp.com/img/logo/axis_logo.fw.png" property="og:image"/>
+    <meta content="https://axiserp.com/img/logo/axis_logo.fw.png" property="og:image:secure_url"/>
+
+    <script>
+        if (/MSIE 10/i.test(navigator.userAgent)) {
+            // This is internet explorer 10
+            window.location.href = "/login?nosupportbrowser=1";
+        }
+        if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+            // This is internet explorer 9 or 11
+            window.location.href = "/login?nosupportbrowser=1";
+        }
+
+        if (/Edge\/\d./i.test(navigator.userAgent)) {
+            // This is Microsoft Edge
+            window.location.href = "/login?nosupportbrowser=1";
+        }
+    </script>
+    <title>Axis Cloud Business &amp;</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/merchant-theme/css/colorpicker.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link href="/merchant-theme/css/bootstrap.min.css" media="screen, print" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/font-awesome.min.css?98ca4c5ff2a8a1032920d977947f6537" media="screen, print"
+          rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/fullcalendar.css" media="screen" rel="stylesheet" type="text/css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/merchant-theme/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+
+    <link href="/merchant-theme/css/jquery-ui-1.10.3.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/chosen.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/datepicker.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/bootstrap-timepicker.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/js/plugins/editable/bootstrap3/css/bootstrap-editable.css" media="screen" rel="stylesheet"
+          type="text/css">
+    <link href="/js/plugins/fileUpload/css/jquery.fileupload.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/jquery.gritter.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace-fonts.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace-rtl.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/ace-skins.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/axis.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/introjs.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/validationEngine.jquery.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/merchant-theme/css/custom/custom.css" media="screen, print" rel="stylesheet" type="text/css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/merchant-theme/css/ace-ie.min.css"/>
+    <![endif]-->
+    <script src="/merchant-theme/js/ace-extra.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <!--[if IE]>
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script><![endif]-->
+    <!--[if !IE]><!-->
+    <script src="/js/jquery-2.0.3.min.js" type="text/javascript"></script><!--<![endif]-->
+    <script src="/js/jquery-ui-1.10.3.custom.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/jquery.fix.clone.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/plugins/editable/bootstrap3/js/bootstrap-editable.min.js?98ca4c5ff2a8a1032920d977947f6537"
+            type="text/javascript"></script>
+    <script src="/merchant-theme/js/typeahead-bs2.min.js?98ca4c5ff2a8a1032920d977947f6537"
+            type="text/javascript"></script>
+    <script src="/js/jquery-numeric.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/intro.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/jquery.validationEngine-fr.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/jquery.validationEngine.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/js/custom.mine.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+    <script src="/merchant-theme/js/bootstrap-notify-master/bootstrap-notify.js"></script>
+    <script src="/js/custom/quoteAdd.js" type="text/javascript"></script>
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112654565-4"></script>
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script>
+        $tutorialName = '';
+        $costlabel = 'Coût';
+        $profitlabel = 'profit';
+        $closeToggleText = 'Tout cacher';
+        $openToggleText = 'Ouvrir tout';
+        $yesText = 'Oui';
+        $noText = 'Aucun';
+        $strongPasswordPopUp = 'Utilisez au moins 8 caractères & au plus 15 caractères. Utilisez au moins une majuscule, une minuscule. Utilisez des nombres et des caractères spéciaux (& ! % # @ (  ) $*) pour renforcer la sécurité de votre mot de passe,';
+        $exitText = 'Exit';
+        $dontShowText = 'Do not show it anymore';
+        $nextText = 'Next';
+        $exitText = 'Exit';
+        $serviceNotAvailable = "Service Not Available";
+        $serviceNotWarning = "Grande demande pour ce service pour les dates fixées et les heures. La disponibilité peut être limitée";
+        $pleaseAddOneProduct = "Add a product to the quote";
+        $clickOnQuoteBackText = "If you click back, the changes will not be saved. Do you want to discard the changes?";
+        $weekPassword = 'Weak';
+        $tooShortPassword = 'Too short';
+        $goodPassword = 'Good';
+        $strongPassword = 'Strong';
+        $discountprecentagemsg = "Rabais ne peut être supérieur à 100%";
+        $areyousuretoremoverow = "Do you want to delete this payment?";
+        $quoteupdatedsuccessmsg = "Quote saved";
+        $doyouwanttosendpaymentrecipt = "Do you want to send this payment receipt to the supplier?";
+        $doyouwanttosendpaymentnotification = "Do you want to send this payment notification?";
+        $authorizeAllProductBeforeSave = "Approve all lines";
+        $pleaseAddOneProductReq = "Add a product to the requisition";
+        $selectsubproduct = "Sub Products";
+        $saveProductText = "Mise à jour";
+        $showGuidePopup = false;
+        $showQuoteTemplateGuidePopup = false;
+        $currentmodule = '';
+        $showGuidePopup = false;
+
+        $showQuoteTemplateGuidePopup = false;
+
+        $(document).on('click', '.introjs-skipbutton', function () {
+            hideGuidePopup(0);
+        });
+    </script>
+
+    <!-- End of ChatBot code -->
+</head>
+<!-- Added by Vipul -->
+<!-- End by Vipul -->
+<body class="">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe height="0"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T97D47X" style="display:none;visibility:hidden"
+            width="0"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        setTimeout(function () {
+            $(document).find('.cookieinfo a').attr('target', "_blank");
+        }, 3000);
+    });
+</script>
+
+<script type="text/javascript">var $calenderClick;</script>
+<header th:replace="fragments/header">
+</header>
+<div class="main-container" id="main-container"><!--custHeight-->
+    <div class="main-container-inner">    <!--custHeight-->
+        <a class="menu-toggler" href="#" id="menu-toggler">
+            <span class="menu-text"></span>
+        </a>
+        <!-- start: Main Menu -->
+        <div th:replace="fragments/sidebar">
+        </div>
+        <div class="hide" id="errorFlashMessageDiv">
+        </div>
+        <div class="main-content">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="header smaller lighter blue">Ajouter Devis</h3>
+                        <div class="col-xs-12 col-sm-12 no-padding-left">
+                            <div class="col-sm-12 no-padding-left toggleHeader">
+                                <button class="btn btn-app btn-sm btn-grey radius-4"  toggle="profile">
+                                    <i class="icon-user bigger-230"></i>
+                                    Profil</button>
+                                <button class="btn btn-app btn-sm btn-info radius-4"  toggle="quote">
+                                    <i class="icon-info bigger-230"></i>
+                                    Devis</button>
+                                <button class="btn btn-app btn-sm btn-danger radius-4"  toggle="product">
+                                    <i class="icon-archive bigger-230"></i>
+                                    Articles</button>
+                                <button class="btn btn-app btn-sm btn-success radius-4"  toggle="price">
+                                    <i class="icon-dollar bigger-230"></i>
+                                    Prix</button>
+                                <button class="btn btn-app btn-sm btn-pink radius-4"  toggle="status">
+                                    <i class="icon-question bigger-230"></i>
+                                    Statut</button>
+                                <button class="btn btn-app btn-sm btn-success radius-4 tuto-step-1 clickIntroButton1"  id="toggleButton" value="open">
+                                    <i class="icon-list-alt bigger-230"></i>
+                                    Afficher tout</button>
+                            </div>
+                        </div>
+                        <form action="" class="form-horizontal&#x20;hr6&#x20;quoteformClass" enctype="multipart&#x2F;form-data" id="quoteForm"  method="post" name="quoteForm">
+                            <div class='row clientProfileDivWrapper clientProfileDiv'>
+                            <div class="col-xs-12">
+                                <div class="widget-box tuto-step-2 collapsed">
+                                    <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse" >
+                                        <h5>Profil du client</h5>
+                                        <div class="widget-toolbar">
+                                            <a href="#" toggle="profile">
+                                                <i class="icon-chevron-down bigger-110"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-3">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-12">
+                                                        </div>
+                                                        <div id="customerName" class="col-xs-12 font-bold font20 custom-padding-top-5">
+                                                        </div>
+                                                        <div id="customerCompany" class="col-xs-12 font-bold custom-padding-top-5">
+                                                            </div>
+                                                        <div id="vatNumber" class="col-xs-12 custom-padding-top-10"><b>Num Entreprise</b> : </div>
+                                                        <div id="customerStatus" class="col-xs-12">
+                                                            <b>État Situation</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-3">
+                                                    <div class="row col-xs-12">
+                                                        <h2>Contact</h2>
+                                                        <div id="customerMail" class="col-xs-12 custom-padding-top-5">
+                                                            <i class="icon-envelope"></i>&nbsp;&nbsp;		                            </div>
+                                                        <div d="customerPhone" class="col-xs-12 custom-padding-top-5"><i class="icon-phone"></i>&nbsp;&nbsp;</div>		                            		                            		                            		                            		                            <div class="col-xs-12 custom-padding-top-10">
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-3">
+                                                    <div id="customerOtherContact" class="row col-xs-12">
+                                                        <h2>Autre Contact</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-3">
+                                                    <div class="row col-xs-12">
+                                                        <h2>Profile</h2>
+                                                        <div id="contactForme" class="col-xs-12 custom-padding-top-5"><b>Forme de Contact: web page</b> </div>
+                                                        <div id="customerBirthDate" class="col-xs-12 custom-padding-top-5"><b>Date de naissance:</b> </div>
+                                                        <div id="customerVendor" class="col-xs-12 custom-padding-top-5"><b>Vendeur:</b> </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row custom-padding-6" style="margin-top:15px;">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-sm-offset-8 col-sm-4" style="padding-top: 15px;">
+                                                            <a class="btn btn-sm btn-warning pull-right" data-toggle="modal" href="#modal-form" role="button">
+                                                                <i class="icon-pencil"></i> Modifier	                                </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="modal" id="modal-form" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                            <h4 class="blue bigger">Profil du client</h4>
+                                        </div>
+                                        <div class="modal-body overflow-visible">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="form-group ">
+                                                        <div class="iframe-loading" style="position:absolute;width:100%;text-align:center"><img src="/img/action_animation.gif" style="width:100px"></div>
+                                                        <iframe data-src="/customer/edit/30336?model-window=true" frameborder="0" height="700px" id="paymentModelWindow" style="position:relative" width="100%"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $( "#modal-form" ).on('shown.bs.modal', function(e){
+                                    $('#modal-form iframe').attr('src',($('#modal-form iframe').attr('data-src')));
+                                });
+                            </script>
+                            <script src="/js/custom/updateSelectField.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script><!-- PAGE CONTENT ENDS --><script>
+                                $('#change_address').click(function(){
+                                    $('#change_address').hide();
+                                    $('#change_address_box').show();
+                                })
+                            </script>
+                            <script>
+                                $('.facebook_post').click(function(){
+                                    window.open("https://m.facebook.com/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=100,left=500,width=600,height=700")
+                                });
+
+                                $('.twitter_post').click(function(){
+                                    window.open("https://mobile.twitter.com/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=100,left=500,width=600,height=700")
+                                });
+
+                                $('.linkedin_post').click(function(){
+                                    window.open("https://www.linkedin.com/in/", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=100,left=500,width=600,height=700")
+                                });
+                            </script>
+                            <!-- PAGE CONTENT ENDS -->
+
+                            <input name="csrf" type="hidden" value="3b730faa55b58c5043455ae71cc5ceb1-5219dfa5abf2cd6c8e2ee9d45db28d18">		<input class="hide" id="reminderIds" name="reminderIds" type="hidden">
+                            <input class="hide" id="model-window" name="model-window" type="hidden" value="">
+                            <div class='row'>
+                                <div class="col-xs-12">
+                                    <div class="widget-box collapsed tuto-step-3"><!---->
+                                        <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse">
+                                            <h5>Date, horaires et facturation</h5>
+                                            <div class="widget-toolbar">
+                                                <a href="#" toggle="quote">
+                                                    <i class="icon-chevron-down bigger-110"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-4&#x20;control-label" for="quote_type">Etape Devis / Prospect</label>                                            <div class="col-sm-5">
+                                                                <select class="form-control" name="quote_type"><option value="">-- Quote Type --</option>
+                                                                    <option value="595903">1st Contact</option>
+                                                                    <option value="595906">Follow up</option>
+                                                                    <option value="595905">Interested</option>
+                                                                    <option value="595907">Other</option>
+                                                                    <option value="595904">Prospect</option></select>                                                                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Les types de devis vous aideront à identifier les étapes de vos devis ">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-4&#x20;control-label" for="exp_date">Date d&#039;expiration</label>                                            <div class="col-sm-5">
+                                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="icon-calendar bigger-110"></i>
+                                                    </span>
+                                                                    <input autocomplete="off" class="form-control&#x20;datepicker" name="exp_date" type="text" value="">                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-4&#x20;control-label" for="req_day">Order Date</label>                                            <div class="col-sm-5">
+                                                                <input autocomplete="off" class="form-control" id="req_day" name="req_day" type="text" value="">                                                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-4&#x20;control-label" for="due_day">Required Date</label>                                            <div class="col-sm-5">
+                                                                <input autocomplete="off" class="form-control" id="due_day" name="due_day" type="text" value="">                                                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-4&#x20;control-label" for="req_time">Starting Time</label>                                            <div class="col-sm-5 bootstrap-timepicker">
+                                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="icon-time bigger-110"></i>
+                                                    </span>
+                                                                    <input autocomplete="off" class="form-control&#x20;timepicker" id="req_time" name="req_time" type="text" value="">                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-4&#x20;control-label" for="due_time">Required Time</label>                                            <div class="col-sm-5 bootstrap-timepicker">
+                                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="icon-time bigger-110"></i>
+                                                    </span>
+                                                                    <input autocomplete="off" class="form-control&#x20;timepicker" id="due_time" name="due_time" type="text" value="">                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group ">
+                                                                <div class="col-sm-offset-4 col-sm-8 col-xs-12 radio" id="click_quote_status">
+                                                                    <label class="col-sm-6&#x20;col-xs-6"><input checked="checked" class="radioQuoteType" name="type" type="radio" value="est">Estimation</label><label class="col-sm-6&#x20;col-xs-6"><input class="radioQuoteType" name="type" type="radio" value="inv">Facture</label>                                                                                                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group invoiceDateDiv hide                                            ">
+                                                                <label class="col-sm-4&#x20;control-label" for="invoice_date">Date Facture</label>                                            <div class="col-sm-5">
+                                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="icon-calendar bigger-110"></i>
+                                                    </span>
+                                                                    <input autocomplete="off" class="form-control&#x20;datepicker" id="invoice_date" name="invoice_date" type="text" value="">                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='row' id="productInformationSection">
+                                <div class="col-xs-12">
+                                    <div class="widget-box collapsed"><!---->
+                                        <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse">
+                                            <h5>Information des produits / Service</h5>
+                                            <div class="widget-toolbar">
+                                                <a href="#" toggle="product">
+                                                    <i class="icon-chevron-down bigger-110"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
+                                                <div class="table-responsive tuto-step-4 quoteProductTableWrapper">
+                                                    <div class="quoteProductTableSubWrapper prd_group_">
+                                                        <h2>
+                                                            <input class="tag_list_css_class" name="tagList[]" type="hidden" value="">
+                                                        </h2>
+                                                        <table class="table table-striped table-bordered table-hover dataTable">
+                                                            <thead>
+                                                            <tr>
+                                                                <th class="col-xs-4">Catalogue d'articles</th>
+                                                                <th>Nombre de fois demandé</th>
+                                                                <th>Disponible</th>
+                                                                <th>Unités</th>
+                                                                <th>Prix</th>
+                                                                <th>Remise(%)</th>
+                                                                <th>Total</th>
+                                                                <th>Modifier</th>
+                                                                <th>Effacer</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="productTableTbody" id="productTable">
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <script>$('.popup').popover({html:true,trigger:'hover'});</script>                            </div>
+                                                <hr/>
+                                                <div class="row">
+                                                    <div class="col-xs-12 text-right">
+                                                        <button class="btn btn-warning" data-toggle="modal" href="#modal-add-new-product" onclick="setTagId('')" type="button">+ Article</button>
+                                                        <button class="btn btn-info" data-toggle="modal" href="#modal-add-section" type="button">Ajouter section</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class="col-xs-12">
+                                    <div class="widget-box collapsed tuto-step-8">
+                                        <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse">
+                                            <h5>Frais et taxes</h5>
+                                            <div class="widget-toolbar">
+                                                <a href="#" toggle="price">
+                                                    <i class="icon-chevron-down bigger-110"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-xs-12">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="col-sm-4 col-xs-4">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-12" for="subTotal">Sous-total</label>                                                    <div class="col-sm-8 col-xs-10">
+                                                                        <input autocomplete="off" class="form-control" id="subTotal" name="sub_total" readonly="readonly" type="text" value="">                                                    </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-sm-4 col-xs-4">
+                                                                    <div class="form-group" id="general_discount" >
+                                                                        <label class="col-sm-12" for="quoDiscount">Rabais général</label>                                                    <div class="col-sm-8 col-xs-10">
+                                                                        <select class="form-control" id="quoDiscount" name="quote_discount"><option value="">-- Discount --</option>
+                                                                            <option value="595922">10</option>
+                                                                            <option value="595923">15</option>
+                                                                            <option value="595924">20</option>
+                                                                            <option value="595925">40</option>
+                                                                            <option value="595921">5</option>
+                                                                            <option value="595926">50</option></select>                                                    </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-4 col-xs-4">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-12" for="ttlAftrDiscount">Après rabais</label>                                                    <div class="col-sm-8 col-xs-10">
+                                                                        <input autocomplete="off" class="form-control" id="ttlAftrDiscount" name="total_after_discount" readonly="readonly" type="text" value="">                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="col-sm-4 col-xs-6">
+                                                                    <div class="form-group ">
+                                                                        <label class="col-sm-12" for="deliveryFee">Livraison</label>                                                    <div class="col-sm-8 col-xs-10">
+                                                                        <input autocomplete="off" class="form-control&#x20;numeric" id="deliveryFee" name="delivery_fee" type="text" value="">                                                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4 col-xs-6">
+                                                                    <div class="form-group ">
+                                                                        <label class="col-xs-12" for="subTotal">Région de livraison</label>
+                                                                        <div class="col-sm-8 col-xs-10">
+                                                                            <div class="input-group">
+                                                                                <select class="form-control" id="delivery_region" name="delivery_region" style="width:220px;padding:3px 5px;">
+                                                                                    <option>Région de livraison</option>
+                                                                                    <option value="334" >15121</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4 col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-12" for="method">Méthode de livraison</label>                                                    <div class="col-sm-8 col-xs-10">
+                                                                        <select class="form-control" id="method" name="method"><option value="">-- Method --</option>
+                                                                            <option value="595938">DHL</option>
+                                                                            <option value="595940">Fedex</option>
+                                                                            <option value="595939">Regular Courrier</option></select>                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="col-sm-4 col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-12" for="otherFee">Autres coûts</label>                                                    <div class="col-sm-8 col-xs-10">
+                                                                        <input autocomplete="off" class="form-control&#x20;numeric" id="otherFee" name="other_fee" type="text" value="">                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4 col-xs-6">
+                                                                    <div class="form-group" id="cost_profit">
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class="col-sm-4 col-xs-6">
+                                                <div class="form-group">
+                                                	<label class="col-sm-12" for="display_all_taxes">Afficher les taxes</label>
+                                                	<div class="col-sm-8 col-xs-10">
+                                                		<input type="checkbox" name="display_all_taxes" id="display_all_taxes" class="form-control" value="1">
+                                                	</div>
+                                                </div>
+											</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6 col-xs-12">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="col-sm-offset-4 col-sm-8 col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6&#x20;control-label" for="ttlBfrTax">Total avant impôt</label>                                                    <div class="col-sm-6">
+                                                                        <input class="form-control" id="ttlBfrTax" name="total_before_tax" readonly="readonly" type="text" value="">                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="form-group ">
+                                                                    <div class="col-sm-4 col-xs-6">
+                                                                        <div class="input-group ">
+                                                                            <select class="form-control" id="tax1Percent" name="tax1_percent"><option value="">-- Taxe 1 --</option>
+                                                                                <option value="595912">10</option>
+                                                                                <option value="595913">15</option>
+                                                                                <option value="595914">16</option>
+                                                                                <option value="595911">5</option></select>    <span class="input-group-addon">
+        <i class="">%</i>    </span>
+                                                                        </div>                                                </div>
+                                                                    <div class="col-sm-4 col-xs-6">
+                                                                        <input class="form-control" id="tax1" name="tax1" readonly="readonly" type="text" value="">                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="form-group ">
+                                                                    <div class="col-sm-4 col-xs-6">
+                                                                        <div class="input-group ">
+                                                                            <select class="form-control" id="tax2Percent" name="tax2_percent"><option value="">-- Taxe 2 --</option>
+                                                                                <option value="595916">3</option>
+                                                                                <option value="595917">5</option>
+                                                                                <option value="595915">9.975</option></select>    <span class="input-group-addon">
+        <i class="">%</i>    </span>
+                                                                        </div>                                                </div>
+                                                                    <div class="col-sm-4 col-xs-6">
+                                                                        <input class="form-control" id="tax2" name="tax2" readonly="readonly" type="text" value="">
+                                                                    </div>
+                                                                    <div class="col-sm-2 col-xs-6">
+                                                    <span class="help-button " data-placement="bottom"
+                                                          data-rel="tooltip" data-trigger="hover" title="Utilisez Tax 2 lorsque votre pays / état / Province vous oblige à facturer 2 taxes de vente indépendantes.">?
+</span>
+
+                                                                        <script>
+                                                                            $(document).ready(function() {
+                                                                                $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                            });
+                                                                        </script>
+                                                                        <style>
+                                                                            .tooltip {z-index:10000!important;}
+                                                                        </style>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="col-sm-offset-4 col-sm-8 col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6&#x20;control-label" for="grandTotal">Grand Total</label>                                                    <div class="col-sm-6">
+                                                                        <input class="grandtotal_text&#x20;form-control" id="grandTotal" name="grand_total" readonly="readonly" type="text" value="">                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-xs-12">
+                                                                <div class="col-sm-offset-4 col-sm-8 col-xs-6 ">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6&#x20;control-label&#x20;asterisk-red" for="currency">Devise*</label>			                                        <div class="col-sm-6 tuto-step-9">
+                                                                        <select class="form-control&#x20;currencydd&#x20;add-on&#x20;OsmosRequiredField&#x20;validate&#x5B;required&#x5D;" name="currency"><option value="">--- Select Currency ---</option>
+                                                                            <option value="USD">US Dollar</option>
+                                                                            <option value="EUR">Euro</option>
+                                                                            <option value="CRC">Colón</option>
+                                                                            <option value="CAD">Canadia Dollar</option>
+                                                                            <option value="MXP">Peso Mexicano</option>
+                                                                            <option value="GUA">Guarani</option>
+                                                                            <option value="ZAR">Rand</option>
+                                                                            <option value="PAB">Balboa</option>
+                                                                            <option value="GBP">Pound</option>
+                                                                            <option value="CLP">Pesos Chilenos</option>
+                                                                            <option value="PEN&#x200B;&#x20;">Sol</option>
+                                                                            <option value="COP">Peso Colombiano</option>
+                                                                            <option value="ECS">Sucre</option>
+                                                                            <option value="GQT">Quetzal</option>
+                                                                            <option value="AUD">Australian Dollar</option>
+                                                                            <option value="DOP">Peso Dominicano</option>
+                                                                            <option value="INR">Rupee</option>
+                                                                            <option value="BSF">Bolivares</option>
+                                                                            <option value="KES">Kenya Shilling</option>
+                                                                            <option value="UYU">Peso Uruguayos</option></select>			                                            			                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class="col-xs-12">
+                                    <div class="widget-box collapsed tuto-step-11">
+                                        <div class="widget-header header-color-blue widget-hea1der-small loadckeditor" data-action="collapse">
+                                            <h5>Statut, Notes et Commentaires</h5>
+                                            <div class="widget-toolbar">
+                                                <a href="#" toggle="status">
+                                                    <i class="icon-chevron-down bigger-110"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-10 col-xs-10">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3&#x20;control-label" for="quote_template">Devis modèle</label>                                            <div class="col-sm-8">
+                                                                <select class="form-control" id="quote_template" name="quote_template"><option value="0">Select Quote/Invoice Template</option>
+                                                                    <option value="4859">tes</option></select>                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="À partir de là, vous pouvez sélectionner et appliquer un modèle de devis parmi ceux disponibles. Pour envoyer votre modèle prédéfini, laissez-le vide.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-3 col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-12&#x20;quoteStatusLabel" for="quoStatus">Etapes du Devis</label>                                            <div class="col-sm-6">
+                                                                <select class="form-control tuto-step-10 OsmosRequiredField validate[required]" id="quoStatus" name="quote_status">
+                                                                    <option value="">-- Status --</option>
+                                                                    <option  data-type="cancel"
+                                                                             value="43874"
+                                                                    >Gggg</option>
+                                                                </select>
+                                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Attribuez un statut de devis pour identifier l'état actuel du Devis / Contrat de votre client. Vous pouvez créer et modifier le statut du devis en allant dans Paramètres / Etat Devis.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-12" for="attach_doc">Joindre un document</label>                                            <div class="col-sm-6">
+                                                                <select class="form-control&#x20;chosen-select" multiple="multiple" name="attach_doc&#x5B;&#x5D;"><option value=""></option></select>                                                                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Joignez un document à votre devis à partir de votre ordinateur ou de fichiers préchargés.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group ">
+                                                                <div class="col-sm-10" style="overflow: hidden">
+                                                                    <input id="document_uploaded_from_pc" name="document_uploaded_from_pc" type="file">
+                                                                </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Vous pouvez parcourir votre ordinateur et joindre un seul fichier à votre citation à partir d'ici.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 col-xs-6">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-12" for="quoSalesPerson">Représentant</label>                                            <div class="col-sm-7">
+                                                                <input class="form-control" id="quoSalesPerson" name="sales_person" readonly="readonly" type="text" value="Tahar&#x20;Al">                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 col-xs-6">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-12" for="comission">Commission</label>                                            <div class="col-sm-8">
+                                                                <input class="form-control" name="comission" readonly="readonly" type="text" value="">                                                <input class="form-control " id="comissionPer" type="hidden"
+                                                                                                                                                                                                             value=""  />
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-10 col-xs-10">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3&#x20;control-label" for="gen_comment">Observations générales</label>                                            <div class="col-sm-9">
+                                                                <textarea class="form-control" id="gen_comment" name="gen_comment"></textarea>                                                        <script src="/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+                                                                <script type="text/javascript" >
+                                                                    CKEDITOR.replace( 'gen_comment',{"filebrowserBrowseUrl":"\/quelfinder\/ckeditor","filebrowserWindowWidth":"1000","filebrowserWindowHeight":"600","Width":"100%","Height":"340","language":"en","uiColor":"#FFFFFF","coreStyles_bold":{"element":"b"},"coreStyles_italic":{"element":"i"},"fontSize_style":{"element":"font","attributes":{"size":"100px"}},"magicline_color":"blue","fullPage":false,"allowedContent":false,"toolbar":null,"width":"100%","height":"150px","customConfig":"short.config.js"});
+                                                                </script>
+
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-10 col-xs-10">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3&#x20;control-label" for="clause">Clauses</label>                                            <div class="col-sm-8">
+                                                                <select class="form-control&#x20;chosen-select" multiple="multiple" name="clause&#x5B;&#x5D;"><option value="595902">Create your clauses from system values section</option></select>                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Sélectionnez des clauses prédéfinies que vous pouvez envoyer sur votre devis ou contrat. Cette option vous offre la flexibilité d'ajouter / modifier des clauses générales de votre contrat actuel.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-offset-2 col-sm-5 col-xs-6">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-12" for="workflow">Flux de travaux</label>                                            <div class="col-sm-8">
+                                                                <textarea class="form-control" name="workflow"></textarea>                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Prenez des notes internes qui aideront les autres utilisateurs à gérer des exigences particulières ou des accords avec les clients. Les notes de flux de travail seront enregistrées et visibles UNIQUEMENT par les utilisateurs internes dans n'importe quelle section.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-5 col-xs-6">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-12" for="sales_note">Note de soumission</label>                                            <div class="col-sm-8">
+                                                                <textarea class="form-control" name="sales_note"></textarea>                                            </div>
+                                                                <div class="col-sm-1">
+                                            <span class="help-button " data-placement="bottom"
+                                                  data-rel="tooltip" data-trigger="hover" title="Si vous utilisez l'eQuote, les commentaires du client seront affichés ici.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                            <a class="btn btn-xs btn-primary pull-left" data-toggle="modal" href="#modal-add-reminder-form" role="button">
+                                                                <i class="icon-plus"></i> Ajouter rappel                            			</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row paymentDiv hide' >
+                                <div class="col-xs-12 ">
+                                    <div class="widget-box ">
+                                        <div class="widget-header header-color-blue widget-hea1der-small" data-action="collapse">
+                                            <h5>Modalités de Paiement</h5>
+                                            <div class="widget-toolbar">
+                                                <a href="#" toggle="payment">
+                                                    <i class="icon-chevron-up bigger-110"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="widget-body ">
+                                            <div class="widget-main table-responsive parentFieldsetDiv " data-count="1"
+                                                 data-elem="tr" data-single="true">
+
+                                                <div class="row" id="ePayment" style="display:none">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-4 col-xs-3">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-4 control-label" for="payViaInvoice">Pay  e-Invoice</label>
+                                                                <div class="col-sm-2 hr4">
+                                                                    <input class="ace ace-switch ace-switch-5"   id="payViaInvoice" name="payViaInvoice" type="checkbox" value="1"/>
+                                                                    <span class="lbl buttonGreen"></span>
+                                                                </div>
+                                                                <div class="col-sm-1">
+												 <span class="help-button " data-placement="bottom"
+                                                       data-rel="tooltip" data-trigger="hover" title="Sélectionnez le moment où vous souhaitez que le client effectue un paiement directement à partir de la facture.">?
+</span>
+
+                                                                    <script>
+                                                                        $(document).ready(function() {
+                                                                            $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                                        });
+                                                                    </script>
+                                                                    <style>
+                                                                        .tooltip {z-index:10000!important;}
+                                                                    </style>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <table class="paymentoptiontabview">
+                                                    <tr class="copyFieldsetDiv">
+                                                        <!--<div class="row">
+                                        <div class="col-sm-12 col-xs-12">-->
+                                                        <td class="col-sm-2 col-xs-6">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-12 col-xs-12 cloneLabel">&nbsp;</label>                                                    <div class="col-sm-12 col-xs-12 paymentTextDiv">
+                                                                1er paiement                                                    </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="col-sm-2 col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-12&#x20;cloneLabel" for="payment&#x5B;0&#x5D;&#x5B;payment_day&#x5D;">Jour</label>                                                    <div class="col-sm-12 col-xs-12">
+                                                                <input autocomplete="off" class="form-control&#x20;datepicker&#x20;custDefault" name="payment&#x5B;0&#x5D;&#x5B;payment_day&#x5D;" onchange="checkFieldValidate&#x28;this&#x29;" type="text" value="">                                                                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="col-sm-2 col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-12&#x20;cloneLabel&#x20;paymentmethods" for="payment&#x5B;0&#x5D;&#x5B;payment_method&#x5D;">Mode de paiement</label>                                                    <div class="col-sm-12 col-xs-12">
+                                                                <select class="form-control" name="payment&#x5B;0&#x5D;&#x5B;payment_method&#x5D;" onchange="checkFieldValidate&#x28;this&#x29;"><option value="">-- Payment --</option>
+                                                                    <option value="595927">Cash</option>
+                                                                    <option value="595928">Cheque</option>
+                                                                    <option value="595941">Creditcard</option>
+                                                                    <option value="595929">Wiretransfer</option></select>                                                                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="col-sm-2 col-xs-6">
+                                                            <div class="form-group ">
+                                                                <label class="col-sm-12&#x20;cloneLabel" for="payment&#x5B;0&#x5D;&#x5B;amount&#x5D;">Montant</label>                                                    <div class="col-sm-12 col-xs-12">
+                                                                <input autocomplete="off" class="form-control&#x20;numeric&#x20;paymentAmount" name="payment&#x5B;0&#x5D;&#x5B;amount&#x5D;" onchange="checkFieldValidate&#x28;this&#x29;" type="text" value="">                                                                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="col-sm-1 col-xs-4">
+                                                            <div class="form-group">
+
+                                                                <label class="col-sm-12 col-xs-12 cloneLabel">%</label>
+
+                                                                <div class="col-sm-12 col-xs-12 removeText">
+                                                                    <input class="paymentPercentDiv" id="percentage_paid" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <!--<td class="col-sm-2 col-xs-6">
+                                                <div class="form-group">
+                                                                                                        <div class="col-sm-12 col-xs-12">
+                                                                                                            </div>
+                                                </div>
+                                            </td>-->
+                                                        <td class="col-sm-2 col-xs-6">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-4&#x20;control-label" for="payment&#x5B;0&#x5D;&#x5B;is_captured&#x5D;">Payé</label>                                                    <div class="col-sm-12 col-xs-12">
+                                                                <input class="ace ace-switch ace-switch-5" type="checkbox" value="1"/>
+                                                                <span class="lbl buttonGreen"></span>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="col-sm-1 col-xs-2">
+                                                            <button class="removeResource hide" type="button">
+                                                                <i class="icon-remove"></i>
+                                                            </button>
+                                                        </td>
+                                                        <!--</div>
+                                    </div>-->
+                                                    </tr>
+                                                </table>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-xs-12">
+                                                        <div class="col-sm-2 col-xs-6">
+                                                            <i class="icon-hand-o-right icon-3x" style="color: red; display: none; padding-right: 10px; float:left"></i>
+                                                            <button class="btn&#x20;btn-sm&#x20;btn-warning&#x20;addResourceQuote" name="addPayment" type="button" value="">Ajouter paiement</button>                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-5 hr6">
+                                            <button class="btn btn-sm btn-success saveValue tuto-step-12" id="sEmail" name="sEmail" style="margin-top: 10px;" type="button" value="">
+                                                <i class="icon-ok"></i>Enregistrer, Envoyer                        </button>
+                                            <button class="btn btn-sm btn-success saveForm" name="save" style="margin-top: 10px;" type="button" value="">
+                                                <i class="icon-ok"></i>Sauvegarder                        </button>
+                                            <button class="btn btn-sm saveValue btn-primary" name="qEmail" style="margin-top: 10px;" type="button" value="">
+                                                <i class="icon-envelope"></i>
+                                                EnvoyerSoumission
+                                            </button>
+                                            <div style="margin-top: 10px;padding-left:0px;">
+                                                <button class="btn btn-sm btn-danger saveValue authBtn hide" name="voidContract" type="button" value="">
+                                                    <i class="icon-ok"></i>Annulation Contract							</button>
+                                            </div>
+                                            <div style="margin-top: 10px;padding-left:0px;">
+                                                <a class="btn btn-sm btn-light backMessage" href="/quote/index" name="cancel">
+                                                    <i class="icon-reply"></i>Retourner	                        </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 hr6">
+                                        </div>
+                                        <div class="col-sm-5 hr6">
+                                            <div class="form-group  authBtn hide">
+                                                <div class="col-sm-4 col-sm-offset-1" style="margin-top: 10px;">
+                                                    <select class="form-control&#x20;input-large" id="authUser" name="auth_user"><option value="">-- User --</option></select>                            </div>
+                                                <div class="col-sm-7 pull-right" style="margin-top: 10px;">
+                                                    <button class="btn btn-sm btn-grey saveValue " name="rAuth" type="button" value="">
+                                                        <i class="icon-ok"></i>Demande d'autorisation                                </button>
+                                                </div>
+                                                <div class="col-sm-7 pull-right" style="margin-top: 10px;">
+                                                    <button class="btn btn-sm btn-grey saveValue authBtn hide" name="auth"
+                                                            type="button" value="">
+                                                        <i class="icon-ok"></i>Autoriser                                </button>
+                                                </div>
+                                                <div class="col-sm-7 pull-right" style="margin-top: 10px;">
+                                                    <button class="btn btn-sm btn-grey saveValue authBtn hide" data-type="authCapture" name="aCapPayment"
+                                                            type="button" value="">
+                                                        <i class="icon-ok"></i>Autoriser et Collecter Paiement                                </button>
+                                                </div>
+                                                <input id="redirectAccRcv" name="redirectAccRcv" type="hidden" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="qSaveInput" name="saveValue" type="hidden" value="">
+                            <input id="totalCostValue" type="hidden" value="0">
+                        </form>    </div>
+                </div>
+
+                <div class="modal" id="modal-add-reminder-form" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                <h4 class="blue bigger">Ajouter rappel</h4>
+                            </div>
+                            <div class="modal-body overflow-visible">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="row">
+                                                            <div class="col-xs-12" id="addNewReminder" style="margin-top:10px;">
+                                                                <form id="reminder_form_temp" name="reminder_form_temp">
+                                                                    <div>
+                                                                        <div class="col-xs-12">
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <div class="input-group">
+                                                                                    <input class="form-control OsmosRequiredField" id="subject" name="subject" placeholder="Subject" style="width: 213px;" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <div class="bootstrap-timepicker">
+                                                                                    <div class="input-group">
+                                                                                        <span class="input-group-addon"><i class="icon-calendar bigger-110"></i></span><input class="form-control datepicker OsmosRequiredField" id="date" name="date" placeholder="Date" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <div class="bootstrap-timepicker">
+                                                                                    <div class="input-group">
+                                                                                        <span class="input-group-addon"><i class="icon-time bigger-110"></i></span><input class="form-control timepicker OsmosRequiredField" id="time" name="time" placeholder="Time" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <div class="">
+                                                                                    <div class="input-group">
+                                                                                        <select class="form-control" id="timezoneCountry" name="timezoneCountry" onchange="getCountryTimeZone(this)">
+                                                                                            <option value="">Pays</option>
+                                                                                            <option selected='selected' value="CA">Canada</option>
+                                                                                            <option value="MX" >Mexico</option>
+                                                                                            <option value="US" >United States</option>
+                                                                                            <option value="AF" >Afghanistan</option>
+                                                                                            <option value="AX" >Aland Islands</option>
+                                                                                            <option value="AL" >Albania</option>
+                                                                                            <option value="DZ" >Algeria</option>
+                                                                                            <option value="AS" >American Samoa</option>
+                                                                                            <option value="AD" >Andorra</option>
+                                                                                            <option value="AO" >Angola</option>
+                                                                                            <option value="AI" >Anguilla</option>
+                                                                                            <option value="AQ" >Antarctica</option>
+                                                                                            <option value="AG" >Antigua and Barbuda</option>
+                                                                                            <option value="AR" >Argentina</option>
+                                                                                            <option value="AM" >Armenia</option>
+                                                                                            <option value="AW" >Aruba</option>
+                                                                                            <option value="AU" >Australia</option>
+                                                                                            <option value="AT" >Austria</option>
+                                                                                            <option value="AZ" >Azerbaijan</option>
+                                                                                            <option value="BS" >Bahamas</option>
+                                                                                            <option value="BH" >Bahrain</option>
+                                                                                            <option value="BD" >Bangladesh</option>
+                                                                                            <option value="BB" >Barbados</option>
+                                                                                            <option value="BY" >Belarus</option>
+                                                                                            <option value="BE" >Belgium</option>
+                                                                                            <option value="BZ" >Belize</option>
+                                                                                            <option value="BJ" >Benin</option>
+                                                                                            <option value="BM" >Bermuda</option>
+                                                                                            <option value="BT" >Bhutan</option>
+                                                                                            <option value="BO" >Bolivia</option>
+                                                                                            <option value="BQ" >Bonaire, Saint Eustatius and Saba </option>
+                                                                                            <option value="BA" >Bosnia and Herzegovina</option>
+                                                                                            <option value="BW" >Botswana</option>
+                                                                                            <option value="BR" >Brazil</option>
+                                                                                            <option value="IO" >British Indian Ocean Territory</option>
+                                                                                            <option value="VG" >British Virgin Islands</option>
+                                                                                            <option value="BN" >Brunei</option>
+                                                                                            <option value="BG" >Bulgaria</option>
+                                                                                            <option value="BF" >Burkina Faso</option>
+                                                                                            <option value="BI" >Burundi</option>
+                                                                                            <option value="KH" >Cambodia</option>
+                                                                                            <option value="CM" >Cameroon</option>
+                                                                                            <option value="CV" >Cape Verde</option>
+                                                                                            <option value="KY" >Cayman Islands</option>
+                                                                                            <option value="CF" >Central African Republic</option>
+                                                                                            <option value="TD" >Chad</option>
+                                                                                            <option value="CL" >Chile</option>
+                                                                                            <option value="CN" >China</option>
+                                                                                            <option value="CX" >Christmas Island</option>
+                                                                                            <option value="CC" >Cocos Islands</option>
+                                                                                            <option value="CO" >Colombia</option>
+                                                                                            <option value="KM" >Comoros</option>
+                                                                                            <option value="CK" >Cook Islands</option>
+                                                                                            <option value="CR" >Costa Rica</option>
+                                                                                            <option value="HR" >Croatia</option>
+                                                                                            <option value="CU" >Cuba</option>
+                                                                                            <option value="CW" >Curaçao</option>
+                                                                                            <option value="CY" >Cyprus</option>
+                                                                                            <option value="CZ" >Czech Republic</option>
+                                                                                            <option value="CD" >Democratic Republic of the Congo</option>
+                                                                                            <option value="DK" >Denmark</option>
+                                                                                            <option value="DJ" >Djibouti</option>
+                                                                                            <option value="DM" >Dominica</option>
+                                                                                            <option value="DO" >Dominican Republic</option>
+                                                                                            <option value="TL" >East Timor</option>
+                                                                                            <option value="EC" >Ecuador</option>
+                                                                                            <option value="EG" >Egypt</option>
+                                                                                            <option value="SV" >El Salvador</option>
+                                                                                            <option value="GQ" >Equatorial Guinea</option>
+                                                                                            <option value="ER" >Eritrea</option>
+                                                                                            <option value="EE" >Estonia</option>
+                                                                                            <option value="ET" >Ethiopia</option>
+                                                                                            <option value="FK" >Falkland Islands</option>
+                                                                                            <option value="FO" >Faroe Islands</option>
+                                                                                            <option value="FJ" >Fiji</option>
+                                                                                            <option value="FI" >Finland</option>
+                                                                                            <option value="FR" >France</option>
+                                                                                            <option value="GF" >French Guiana</option>
+                                                                                            <option value="PF" >French Polynesia</option>
+                                                                                            <option value="TF" >French Southern Territories</option>
+                                                                                            <option value="GA" >Gabon</option>
+                                                                                            <option value="GM" >Gambia</option>
+                                                                                            <option value="GE" >Georgia</option>
+                                                                                            <option value="DE" >Germany</option>
+                                                                                            <option value="GH" >Ghana</option>
+                                                                                            <option value="GI" >Gibraltar</option>
+                                                                                            <option value="GR" >Greece</option>
+                                                                                            <option value="GL" >Greenland</option>
+                                                                                            <option value="GD" >Grenada</option>
+                                                                                            <option value="GP" >Guadeloupe</option>
+                                                                                            <option value="GU" >Guam</option>
+                                                                                            <option value="GT" >Guatemala</option>
+                                                                                            <option value="GG" >Guernsey</option>
+                                                                                            <option value="GN" >Guinea</option>
+                                                                                            <option value="GW" >Guinea-Bissau</option>
+                                                                                            <option value="GY" >Guyana</option>
+                                                                                            <option value="HT" >Haiti</option>
+                                                                                            <option value="HN" >Honduras</option>
+                                                                                            <option value="HK" >Hong Kong</option>
+                                                                                            <option value="HU" >Hungary</option>
+                                                                                            <option value="IS" >Iceland</option>
+                                                                                            <option value="IN" >India</option>
+                                                                                            <option value="ID" >Indonesia</option>
+                                                                                            <option value="IR" >Iran</option>
+                                                                                            <option value="IQ" >Iraq</option>
+                                                                                            <option value="IE" >Ireland</option>
+                                                                                            <option value="IM" >Isle of Man</option>
+                                                                                            <option value="IL" >Israel</option>
+                                                                                            <option value="IT" >Italy</option>
+                                                                                            <option value="CI" >Ivory Coast</option>
+                                                                                            <option value="JM" >Jamaica</option>
+                                                                                            <option value="JP" >Japan</option>
+                                                                                            <option value="JE" >Jersey</option>
+                                                                                            <option value="JO" >Jordan</option>
+                                                                                            <option value="KZ" >Kazakhstan</option>
+                                                                                            <option value="KE" >Kenya</option>
+                                                                                            <option value="KI" >Kiribati</option>
+                                                                                            <option value="KW" >Kuwait</option>
+                                                                                            <option value="KG" >Kyrgyzstan</option>
+                                                                                            <option value="LA" >Laos</option>
+                                                                                            <option value="LV" >Latvia</option>
+                                                                                            <option value="LB" >Lebanon</option>
+                                                                                            <option value="LS" >Lesotho</option>
+                                                                                            <option value="LR" >Liberia</option>
+                                                                                            <option value="LY" >Libya</option>
+                                                                                            <option value="LI" >Liechtenstein</option>
+                                                                                            <option value="LT" >Lithuania</option>
+                                                                                            <option value="LU" >Luxembourg</option>
+                                                                                            <option value="MO" >Macao</option>
+                                                                                            <option value="MK" >Macedonia</option>
+                                                                                            <option value="MG" >Madagascar</option>
+                                                                                            <option value="MW" >Malawi</option>
+                                                                                            <option value="MY" >Malaysia</option>
+                                                                                            <option value="MV" >Maldives</option>
+                                                                                            <option value="ML" >Mali</option>
+                                                                                            <option value="MT" >Malta</option>
+                                                                                            <option value="MH" >Marshall Islands</option>
+                                                                                            <option value="MQ" >Martinique</option>
+                                                                                            <option value="MR" >Mauritania</option>
+                                                                                            <option value="MU" >Mauritius</option>
+                                                                                            <option value="YT" >Mayotte</option>
+                                                                                            <option value="FM" >Micronesia</option>
+                                                                                            <option value="MD" >Moldova</option>
+                                                                                            <option value="MC" >Monaco</option>
+                                                                                            <option value="MN" >Mongolia</option>
+                                                                                            <option value="ME" >Montenegro</option>
+                                                                                            <option value="MS" >Montserrat</option>
+                                                                                            <option value="MA" >Morocco</option>
+                                                                                            <option value="MZ" >Mozambique</option>
+                                                                                            <option value="MM" >Myanmar</option>
+                                                                                            <option value="NA" >Namibia</option>
+                                                                                            <option value="NR" >Nauru</option>
+                                                                                            <option value="NP" >Nepal</option>
+                                                                                            <option value="NL" >Netherlands</option>
+                                                                                            <option value="NC" >New Caledonia</option>
+                                                                                            <option value="NZ" >New Zealand</option>
+                                                                                            <option value="NI" >Nicaragua</option>
+                                                                                            <option value="NE" >Niger</option>
+                                                                                            <option value="NG" >Nigeria</option>
+                                                                                            <option value="NU" >Niue</option>
+                                                                                            <option value="NF" >Norfolk Island</option>
+                                                                                            <option value="KP" >North Korea</option>
+                                                                                            <option value="MP" >Northern Mariana Islands</option>
+                                                                                            <option value="NO" >Norway</option>
+                                                                                            <option value="OM" >Oman</option>
+                                                                                            <option value="PK" >Pakistan</option>
+                                                                                            <option value="PW" >Palau</option>
+                                                                                            <option value="PS" >Palestinian Territory</option>
+                                                                                            <option value="PA" >Panama</option>
+                                                                                            <option value="PG" >Papua New Guinea</option>
+                                                                                            <option value="PY" >Paraguay</option>
+                                                                                            <option value="PE" >Peru</option>
+                                                                                            <option value="PH" >Philippines</option>
+                                                                                            <option value="PN" >Pitcairn</option>
+                                                                                            <option value="PL" >Poland</option>
+                                                                                            <option value="PT" >Portugal</option>
+                                                                                            <option value="PR" >Puerto Rico</option>
+                                                                                            <option value="QA" >Qatar</option>
+                                                                                            <option value="CG" >Republic of the Congo</option>
+                                                                                            <option value="RE" >Reunion</option>
+                                                                                            <option value="RO" >Romania</option>
+                                                                                            <option value="RU" >Russia</option>
+                                                                                            <option value="RW" >Rwanda</option>
+                                                                                            <option value="BL" >Saint Barthélemy</option>
+                                                                                            <option value="SH" >Saint Helena</option>
+                                                                                            <option value="KN" >Saint Kitts and Nevis</option>
+                                                                                            <option value="LC" >Saint Lucia</option>
+                                                                                            <option value="MF" >Saint Martin</option>
+                                                                                            <option value="PM" >Saint Pierre and Miquelon</option>
+                                                                                            <option value="VC" >Saint Vincent and the Grenadines</option>
+                                                                                            <option value="WS" >Samoa</option>
+                                                                                            <option value="SM" >San Marino</option>
+                                                                                            <option value="ST" >Sao Tome and Principe</option>
+                                                                                            <option value="SA" >Saudi Arabia</option>
+                                                                                            <option value="SN" >Senegal</option>
+                                                                                            <option value="RS" >Serbia</option>
+                                                                                            <option value="SC" >Seychelles</option>
+                                                                                            <option value="SL" >Sierra Leone</option>
+                                                                                            <option value="SG" >Singapore</option>
+                                                                                            <option value="SX" >Sint Maarten</option>
+                                                                                            <option value="SK" >Slovakia</option>
+                                                                                            <option value="SI" >Slovenia</option>
+                                                                                            <option value="SB" >Solomon Islands</option>
+                                                                                            <option value="SO" >Somalia</option>
+                                                                                            <option value="ZA" >South Africa</option>
+                                                                                            <option value="GS" >South Georgia and the South Sandwich Islands</option>
+                                                                                            <option value="KR" >South Korea</option>
+                                                                                            <option value="SS" >South Sudan</option>
+                                                                                            <option value="ES" >Spain</option>
+                                                                                            <option value="LK" >Sri Lanka</option>
+                                                                                            <option value="SD" >Sudan</option>
+                                                                                            <option value="SR" >Suriname</option>
+                                                                                            <option value="SJ" >Svalbard and Jan Mayen</option>
+                                                                                            <option value="SZ" >Swaziland</option>
+                                                                                            <option value="SE" >Sweden</option>
+                                                                                            <option value="CH" >Switzerland</option>
+                                                                                            <option value="SY" >Syria</option>
+                                                                                            <option value="TW" >Taiwan</option>
+                                                                                            <option value="TJ" >Tajikistan</option>
+                                                                                            <option value="TZ" >Tanzania</option>
+                                                                                            <option value="TH" >Thailand</option>
+                                                                                            <option value="TG" >Togo</option>
+                                                                                            <option value="TK" >Tokelau</option>
+                                                                                            <option value="TO" >Tonga</option>
+                                                                                            <option value="TT" >Trinidad and Tobago</option>
+                                                                                            <option value="TN" >Tunisia</option>
+                                                                                            <option value="TR" >Turkey</option>
+                                                                                            <option value="TM" >Turkmenistan</option>
+                                                                                            <option value="TC" >Turks and Caicos Islands</option>
+                                                                                            <option value="TV" >Tuvalu</option>
+                                                                                            <option value="VI" >U.S. Virgin Islands</option>
+                                                                                            <option value="UG" >Uganda</option>
+                                                                                            <option value="UA" >Ukraine</option>
+                                                                                            <option value="AE" >United Arab Emirates</option>
+                                                                                            <option value="GB" >United Kingdom</option>
+                                                                                            <option value="UM" >United States Minor Outlying Islands</option>
+                                                                                            <option value="UY" >Uruguay</option>
+                                                                                            <option value="UZ" >Uzbekistan</option>
+                                                                                            <option value="VU" >Vanuatu</option>
+                                                                                            <option value="VA" >Vatican</option>
+                                                                                            <option value="VE" >Venezuela</option>
+                                                                                            <option value="VN" >Vietnam</option>
+                                                                                            <option value="WF" >Wallis and Futuna</option>
+                                                                                            <option value="EH" >Western Sahara</option>
+                                                                                            <option value="YE" >Yemen</option>
+                                                                                            <option value="ZM" >Zambia</option>
+                                                                                            <option value="ZW" >Zimbabwe</option>
+                                                                                            <option value="other">Autre</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <div class="">
+                                                                                    <div class="input-group">
+                                                                                        <select class="form-control" id="timezone" name="timezone">
+                                                                                            <option value="">Fuseau horaire</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <select class="form-control" id="priority" name="priority">
+                                                                                    <option value="">Priorité</option>
+                                                                                    <option value="High">High</option>
+                                                                                    <option value="Medium">Moyenne</option>
+                                                                                    <option value="Low">Low</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-xs-12 col-sm-4" style="padding-top:10px;">
+                                                                                <select class="form-control chosen-select  OsmosRequiredField" data-placeholder="Select User(s)" id="employees" multiple="true" name="employees[]" >
+                                                                                    <option value="5700">Tahar Al</option>
+                                                                                    <option value="client">Client</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xs-12" style="padding-top:10px;">
+                                                                            <div class="col-xs-12">
+                                                                                <label>Description</label>
+                                                                            </div>
+                                                                            <div class="col-sm-8 col-xs-12">
+                                                                                <textarea class="form-control" id="description" name="description" row="3"></textarea>
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-xs-12" style="padding-top:10px;">
+                                                                                <button class="btn btn-success" id="saveReminder" name="saveRemider" type="button" value="">
+                                                                                    <i class="icon-ok"></i>Sauvegarder														</button>
+                                                                                <button class="btn btn-danger" id="cancelReminder" name="cancelReminder" type="button" value="">
+                                                                                    <i class="icon-ban"></i>Annuler																</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="col-xs-12">&nbsp;</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $ItemGroupByCategory = '';
+                    $customerPriceRateList = "";
+                    $sendError  = 0;
+                    $quoteId    = "";
+                    $isContract = 0;
+
+                    $allfieldrequiredmsg = "Tous les champs sont requis";
+                    $productcannotlessthanminimummsg = "Le prix ne peut pas être inférieur au prix minimum";
+                    $totalamountgreaterthanrequired = "Le montant total est supérieur au montant requis";
+                    $totalpaidhundred = "No more payments can be added, the total amount has been covered";
+                    $totalpaidnothundred = "Le montant total payé net pas à 100%";
+                    $productaddedsuccessmsg = "Produit / Service ajouté";
+                    $productconflicted = "Product is conflicted";
+                    $oneormoreservicearenotavaialble = "One or More services are not available";
+                    $oneormoreserviceareconflicted = "One or More services are conflicted. Are you sure to continue?";
+                    $youarenotenteredseconddate = "Vous n'avez pas entré la 2ème date et heure, voulez-vous continuer?";
+                    $youarenotenteredgeneraldate = "Vous n'avez pas entré de dates ou d'heures, voulez-vous continuer?";
+
+                    $doyouwanttoremoveproductconfirm = "Voulez-vous supprimer cette entree?";
+                    $voidingcannotbeundoneconfirm = "ANNULATION peut pas ne pas être annulée et il aura une incidence sur le reste du processus";
+
+                    function closeModalwindow() {
+                        $('#modal-data-form').modal('toggle');
+                        refreshProductCategory();
+                        $('#pdtCategory').trigger('change');
+                        displayAlertMessage($productaddedsuccessmsg);
+                    }
+                    $(document).ready(function(){
+                        if($(window).width() >= 900) {
+                            // $( "#productTable" ).sortable();
+                            $( ".productTableTbody" ).sortable();
+                        }
+                    });
+
+                    $(document).ready(function(){
+                        if($showGuidePopup == true && (Cookies.get("startGuideTutorial") == '1' || '' == '1')) {
+                            function startIntro1(){
+                                var intro1 = introJs().setOptions({"showStepNumbers":false, "showBullets":false,"showButtons":false,"exitOnOverlayClick": false,"exitOnEsc": false});
+                                intro1.setOptions({
+                                    steps: [
+                                        {
+                                            element: document.querySelector('.tuto-step-1'),
+                                            intro: "Now we will create a QUOTE for our previous client. Click here to open all quote tabs<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                                        }
+                                    ]
+                                });
+                                intro1.start();
+                            }
+                            startIntro1();
+                            function startIntro2(){
+                                var intro2 = introJs().setOptions({"showStepNumbers": false,"showBullets":false,"exitOnOverlayClick": false,"exitOnEsc": false}).oncomplete(function(){hideGuidePopup('0','');});
+                                intro2.setOptions({
+                                    steps: [
+                                        {
+                                            element: document.querySelector('.tuto-step-2'),
+                                            intro: "Here you\'ll find the client information that you just entered<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                                        },
+                                        {
+                                            element: document.querySelector('.tuto-step-3'),
+                                            intro: "Here you can enter quote dates and times IF NEEDED. <strong>Date and time description can be modified</strong> to match your business needs.  <a href=\'/quote/title\' target=\'_blank\'>Setup / Date & Time description</a>. From this section you can create invoices as well.<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                            position: 'top'
+                                        },
+                                        {
+                                            element: document.querySelector('.tuto-step-4'),
+                                            intro: "Here is where you'll add the items you want to quote. You can later add all your items in bulk from here <a href='/product' target='_blank'>Catalogs / Articles</a><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                                        },
+                                        {
+                                            element: document.querySelector('.tuto-step-5'),
+                                            intro: "Select an item form the list or create a new one by clicking on the \"+\" sign<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                            position: 'left'
+                                        }
+                                    ]
+                                });
+                                intro2.start();
+                            }
+                            $('.clickIntroButton1').click(function(){
+                                introJs().exit();
+                                setTimeout(function(){
+                                    startIntro2()
+                                }, 500);
+                            });
+                        }
+
+                        //jQuery("#reminder_form_temp").validationEngine({promptPosition: 'inline'});
+
+                    });
+
+                    function startIntro3(){
+                        var intro3 = introJs().setOptions({"showStepNumbers": false,"showBullets":false,"exitOnOverlayClick": false,"exitOnEsc": false}).oncomplete(function(){hideGuidePopup('0','');});
+                        intro3.setOptions({
+                            steps: [
+                                {
+                                    element: document.querySelector('.tuto-step-8'),
+                                    intro: "Here you\'ll find all the pricing information, shipping, taxes, currency, etc. The  values can be modified in <a href=\'/setup/add\' target=\'_blank\'>Catalogs / System Values</a><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                    position: 'top'
+                                },
+                                {
+                                    element: document.querySelector('.tuto-step-9'),
+                                    intro: "Select any currency form the list. You can add and select a default currency from <a href=\'/setup/add\' target=\'_blank\'>catalogs / system values</a><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                    position: 'left'
+                                },
+                                {
+                                    element: document.querySelector('.tuto-step-11'),
+                                    intro: "This section it <strong>SUPER IMPORTANT</strong> for your quotes. From here you can select your custom quote template, attach documents, add clauses and select the quote stage. <strong>You can create your own quote template</strong> from <a href=\'/quote-template\' target=\'_blank\'>Biz Setup / Quote template</a><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                    position: 'top'
+                                },
+                                {
+                                    element: document.querySelector('.tuto-step-10'),
+                                    intro: "<strong>Select</strong> from the list the option \"<strong>Follow up / Seguimiento with client</strong>\". These stages can be also customized from: <a href=\'/quote-status\' target=\'_blank\'>Setup / Quote stages</a><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                    position: 'right'
+                                },
+                                {
+                                    element: document.querySelector('.tuto-step-12'),
+                                    intro: "Click to send the quote<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                                }
+                            ]
+                        });
+                        intro3.start();
+                    }
+
+                    function startIntro4(){
+                        var intro4 = introJs().setOptions({"showStepNumbers": false,"showBullets":false,"exitOnOverlayClick": false,"exitOnEsc": false}).oncomplete(function(){hideGuidePopup('0','');});
+                        intro4.setOptions({
+                            steps: [
+                                {
+                                    element: document.querySelector('.tuto-step-6'),
+                                    intro: "Enter a quantity, <strong>could be 1</strong><div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>"
+                                },
+                                {
+                                    element: document.querySelector('.tuto-step-7'),
+                                    intro: "Click in add. You can add as many items as you need, but for this tutorial let\'s just add one<div class='text-right'><a href='#' class='noThanksWillDoLater'>Sortir</a></div>",
+                                    position: 'left'
+                                }
+                            ]
+                        });
+                        intro4.start();
+                    }
+
+
+                </script>
+
+                <div class="modal" id="modal-add-section" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                <h4 class="blue bigger">Ajouter un titre de section</h4>
+                            </div>
+                            <div class="modal-body overflow-visible">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label>Titre de la section</label>
+                                        <input class="form-control ui-autocomplete-input" id="section_title" list="tag_ids"  name="section_title" type="text">
+                                        <datalist id="tag_ids">
+                                            <option data-id="242" data-value="tttttt">tttttt</option>
+                                        </datalist>
+                                        <div class="error" id="section_title_error" style="display:none">Section Title Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" onclick="addSectionTitle()">Ajouter section</button>
+                                <button class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="modal-edit-section" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                <h4 class="blue bigger">Update Section Title</h4>
+                            </div>
+                            <div class="modal-body overflow-visible">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label>Titre de la section</label>
+                                        <input class="form-control ui-autocomplete-input" id="section_new_title" list="tag_ids"  name="section_new_title" type="text">
+                                        <datalist id="tag_ids">
+                                            <option data-id="242" data-value="tttttt">tttttt</option>
+                                        </datalist>
+                                        <div class="error" id="section_update_title_error" style="display:none">Section Title Required</div>
+                                        <input id="old_tag_id" name="old_tag_id" type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" onclick="updateSectionTitle()">Update Section</button>
+                                <button class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function setUpdateTagId(tagId) {
+                        $('#old_tag_id').val(tagId);
+                    }
+                    function addSectionTitle() {
+                        if($('#section_title').val().trim() != '') {
+                            showLoader();
+                            $.ajax({
+                                method: 'post',
+                                url: '/tag/add',
+                                data: {'name' : $('#section_title').val().trim() },
+                                success: function($data) {
+                                    $result = getJsonData($data);
+                                    if($result) {
+                                        if($result.new  == '1')
+                                            $('#tag_ids').append("<option data-value='"+$result.value+"' data-id='"+$result.value+"'>"+$result.label+"</option>");
+                                    }
+                                    $('#section_title').val('');
+                                    $('#modal-add-section').modal('hide');
+                                    if($('.prd_group_'+$result.value).html() == undefined) {
+                                        addQuoteItemSection($result.value, $result.label);
+                                    }
+                                    hideLoader();
+                                    $('#section_title_error').hide();
+                                }
+                            });
+                        } else {
+                            $('#section_title_error').show();
+                        }
+                    }
+
+                    function updateSectionTitle() {
+                        if($('#section_new_title').val().trim() != '') {
+                            const arrQuoteProductUpdated = [];
+                            $tags = $('#old_tag_id').val();
+                            $('.prd_group_'+$tags).find('.quote_product_id_css_class').each(function(){
+                                arrQuoteProductUpdated.push($(this).val());
+                            });
+                            showLoader();
+                            $.ajax({
+                                method: 'post',
+                                url: '/tag/add',
+                                data: {'name' : $('#section_new_title').val().trim(),
+                                    'old_tag_id': $('#old_tag_id').val(),
+                                    'updateTag': '1',
+                                    'arrQuoteProductUpdated': arrQuoteProductUpdated
+                                },
+                                success: function($data) {
+                                    $result = getJsonData($data);
+                                    if($result) {
+                                        if($result.new  == '1')
+                                            $('#tag_ids').append("<option data-value='"+$result.value+"' data-id='"+$result.value+"'>"+$result.label+"</option>");
+                                    }
+                                    $('#section_new_title').val('');
+                                    $('#old_tag_id').val('');
+                                    $('#modal-edit-section').modal('hide');
+
+                                    $html = $result.label + `<a onclick="setUpdateTagId('`+$result.value+`')" data-toggle="modal" href="#modal-edit-section" class="sectionEdit" data-tag="`+$result.value+`">
+                                            <i class="icon-edit bigger-15"></i>
+                                        </a>
+                                        <span class="red productDelete" data-action="section_delete" data-tag="`+$result.value+`">
+                                            <i class="icon-trash bigger-15"></i>
+                                        </span>
+                                        <input type="hidden" class="tag_list_css_class" name="tagList[]" value="`+$result.value+`">`;
+                                    $('.prd_group_'+$tags).find('h2').html($html);
+
+                                    $html = `<tr>
+                             <td align="right" colspan="9">
+                                <button data-toggle="modal" href="#modal-add-new-product" onclick="setTagId('`+$result.value+`')" type="button" class="btn btn-warning">+ Article</button>
+                                </td>
+                            </tr>`;
+                                    $('.prd_group_'+$tags).find('tfoot').html($html);
+                                    $('.prd_group_'+$tags).find('.tag_list_css_class').val($result.value);
+                                    $('.prd_group_'+$tags).addClass('prd_group_'+$result.value);
+                                    $('.prd_group_'+$tags).removeClass('prd_group_'+$tags);
+                                    hideLoader();
+                                    $('#section_update_title_error').hide();
+                                }
+                            });
+                        } else {
+                            $('#section_update_title_error').show();
+                        }
+                    }
+
+                    function addQuoteItemSection(value,label) {
+                        $html = `<div class="quoteProductTableSubWrapper prd_group_`+value+`">
+                <h2>`+label;
+
+                        if($ItemGroupByCategory != '1') {
+                            $html = $html +`<a onclick="setUpdateTagId('`+$result.value+`')" data-toggle="modal" href="#modal-edit-section" class="sectionEdit" data-tag="`+$result.value+`">
+            <i class="icon-edit bigger-15"></i>
+        </a>
+        <span class="red productDelete" data-action="section_delete" data-tag="`+value+`">
+            <i class="icon-trash bigger-15"></i>
+        </span>`;
+                        }
+
+                        $html = $html + `<input type="hidden" class="tag_list_css_class" name="tagList[]" value="`+value+`"></h2>
+                <table class="table table-striped table-bordered table-hover dataTable">
+                    <thead>
+                        <tr>
+                            <th class="col-xs-4">Catalogue d'articles</th>
+                            <th>Nombre de fois demandé</th>
+                            <th>Disponible</th>
+                            <th>Unités</th>
+                            <th>Prix</th>
+                            <th>Remise(%)</th>
+                            <th>Total</th>
+                            <th>Modifier</th>
+                            <th>Effacer</th>
+                        </tr>
+                    </thead>
+                    <tbody class="productTableTbody" id="productTable_`+value+`">
+                    </tbody>`;
+                        if($ItemGroupByCategory != '1') {
+                            $html = $html +  `<tfoot>
+                                            <tr>
+                                                <td align="right" colspan="9">
+                                                <button data-toggle="modal" href="#modal-add-new-product" onclick="setTagId('`+value+`')" type="button" class="btn btn-warning">+ Article</button>
+                                                </td>
+                                            </tr>
+                                        </tfoot>`;
+                        }
+
+                        $html = $html + `</table>
+            </div>`;
+                        $( ".productTableTbody" ).sortable();
+                        $('.quoteProductTableWrapper').append($html);
+                    }
+                </script><div class="modal" id="modal-add-new-product" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+                            <h4 class="blue bigger">Ajouter</h4>
+                        </div>
+                        <div class="modal-body overflow-visible">
+                            <fieldset class="productFieldset" id="productFieldset">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12">
+                                        <div class="col-xs-12">
+                                            <div class="form-group ">
+                                                <label for="pdtCategory">Catégorie</label>                    <div>
+                                                <select class="form-control&#x20;chosen-select" data-item="category" id="pdtCategory" name="product&#x5B;category&#x5D;"><option value="">-- Product Category --</option>
+                                                    <option value="52055">fff</option></select>                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label for="parentProducts">Catalogue d&#039;articles*</label>                    <div class="tuto-step-5" style="width:100%;">
+                                                <div class="input-group OsmosRequiredField">
+                                                    <select class="form-control&#x20;chosen-select&#x20;productDropdown&#x20;OsmosRequiredField" data-item="parentProducts" id="parentProducts" name="product&#x5B;parent_product&#x5D;"><option value="">-- Product --</option></select>    <span class="input-group-addon">
+        <a class="saveToDatabase no-hover-underline" code="" data-target="#modal-data-form" data-toggle="modal" data-type="text" href="#modal-data-form" title="Add"><i class="icon-plus"></i></a>    </span>
+                                                </div>                    </div>
+                                            </div>
+                                            <div class="form-group show_on_parent_product" style="display:none;" >
+                                                <label for="product">Sous-articles</label>                    <div>
+                                                <div class="input-group OsmosRequiredField">
+                                                    <select class="form-control&#x20;chosen-select&#x20;productDropdown&#x20;OsmosRequiredField" data-item="product" id="product" name="product&#x5B;product&#x5D;"><option value="">-- Sub Product --</option></select>    <span class="input-group-addon">
+        <a class="saveToDatabase no-hover-underline" code="" data-target="#modal-data-form" data-toggle="modal" data-type="text" href="#modal-data-form" title="Add"><i class="icon-plus"></i></a>    </span>
+                                                </div>                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pdtQty">Quantité*</label>                    <div class="tuto-step-6">
+                                                <input autocomplete="off" class="form-control&#x20;integer&#x20;OsmosRequiredField" data-item="quantity" id="pdtQty" name="product&#x5B;qty&#x5D;" type="text" value="">                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pdtUnit">Unités</label>                    <div>
+                                                <!--<label id="pdtUnitLabel" class="pdtUnitLabel"></label>-->
+                                                <select class="form-control" data-item="unit" id="pdtUnit" name="product&#x5B;unit&#x5D;"><option value=""></option></select>                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pdtRate">Price</label>                    <div>
+                                                <input autocomplete="off" class="form-control&#x20;no-padding-right&#x20;numeric" data-commission="" data-item="rate" data-minrate="" data-modify="" id="pdtRate" name="product&#x5B;rate&#x5D;" type="text" value="">                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pdtDiscount">Rabais</label>                    <div>
+                                                <select class="form-control" data-item="discount" id="pdtDiscount" name="product&#x5B;discount&#x5D;"><option value="">-- Discount --</option></select>                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pdtTotal">Total</label>                    <div>
+                                                <input autocomplete="off" class="form-control&#x20;no-padding-right" data-item="total" id="pdtTotal" name="product&#x5B;total&#x5D;" readonly="readonly" type="text" value="">                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6">
+                                            <div class="form-group">
+                                                <label class="control-label" for="product&#x5B;tax_exemption&#x5D;">Exonération d&#039;impôt</label>                    <div>
+                                                <input name="product&#x5B;tax_exemption&#x5D;" type="hidden" value="0"><input class="ace&#x20;ace-switch&#x20;ace-switch-5" data-item="taxExem" name="product&#x5B;tax_exemption&#x5D;" type="checkbox" value="1">                        <span class="lbl"></span>
+                                                <span class="help-button " data-placement="bottom"
+                                                      data-rel="tooltip" data-trigger="hover" title="Sélectionnez si vous n'êtes pas obligé de prélever des taxes sur cet article.">?
+</span>
+
+                                                <script>
+                                                    $(document).ready(function() {
+                                                        $('[data-rel=tooltip]').tooltip({container:'body'});
+                                                    });
+                                                </script>
+                                                <style>
+                                                    .tooltip {z-index:10000!important;}
+                                                </style>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-4">
+                                            <div class="form-group">
+                                                <label for="pdtPromo">Promo</label>                    <div>
+                                                <select class="form-control" data-item="promotion" id="pdtPromo" name="product&#x5B;promo&#x5D;"><option value="">-- Promo --</option>
+                                                    <option value="595930">Create your promotions form system values section</option></select>                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label" for="pdtComment">Commentaire</label>                    <div>
+                                                <input autocomplete="off" class="form-control" data-item="comment" id="pdtComment" name="product&#x5B;comment&#x5D;" type="text" value="">                    </div>
+                                            </div>
+                                        </div>
+                                        <input class="form-control tag_id_css_class" id="tag_id" name="product[tag_id]" type="hidden">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12">
+                                        <div class="col-xs-12 tuto-step-7 text-right">
+                                            <button class="btn&#x20;btn-warning&#x20;btn-sm&#x20;pull-right" id="addProduct" name="product&#x5B;addProduct&#x5D;" type="button" value="">Ajouter</button>                <i class="icon-hand-o-right icon-3x pull-right" style="color: red; display: none; padding-right: 10px"></i>
+                                            <input id="quoteProductId" type="hidden" value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <script>
+                                function setTagId(groupdId) {
+                                    resetAllFields();
+                                    setTimeout(() => {
+                                        $('#tag_id').val(groupdId);
+                                    }, 2000);
+                                }
+                            </script>
+                            <style>
+                                #productFieldset .form-group {
+                                    max-width:300px;
+                                }
+                                .ui-autocomplete {
+                                    z-index:99999999;
+                                }
+                            </style>            </div>
+                    </div>
+                </div>
+            </div><div class="modal" id="modal-data-form" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+                            <h4 class="blue bigger">Ajouter</h4>
+                        </div>
+                        <div class="modal-body overflow-visible">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group ">
+                                        <div class="iframe-loading" style="position:absolute;width:100%;text-align:center"><img src="/img/action_animation.gif" style="width:100px"></div>
+                                        <iframe data-src="/product/add?model-window=true" frameborder="0" height="700px" id="paymentModelWindow" style="position:relative" width="100%"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <script>
+                    $( "#modal-data-form" ).on('shown.bs.modal', function(e){
+                        $('#modal-data-form iframe').attr('src',($('#modal-data-form iframe').attr('data-src')));
+                    });
+                </script>
+
+
+                <style>
+                    #employees_chosen {width:213px!important;}
+                    .modal {z-index:99999999;}
+                    .datepicker-dropdown {z-index:99999999!important;}
+                </style>
+                <script src="/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+                <script>
+                    $('.loadckeditor').click(function(){
+                        if (CKEDITOR.instances.gen_comment) CKEDITOR.instances.gen_comment.destroy();
+                        CKEDITOR.replace( 'gen_comment',{"filebrowserBrowseUrl":"\/quelfinder\/ckeditor","filebrowserWindowWidth":"1000","filebrowserWindowHeight":"600","Width":"100%","Height":"340","language":"en","uiColor":"#FFFFFF","coreStyles_bold":{"element":"b"},"coreStyles_italic":{"element":"i"},"fontSize_style":{"element":"font","attributes":{"size":"100px"}},"magicline_color":"blue","fullPage":false,"allowedContent":false,"toolbar":null,"width":"100%","height":"150px","customConfig":"short.config.js"});
+                    })
+                </script>
+                <br/>
+                <footer class="no-print">
+                    <div class="row">
+                        <div class="col-sm-12 align-right">
+                            &copy; 2021 <a href="http://osmoscloud.com/" target="_blank">Osmos Cloud Inc</a> All rights reserved	                                </div><!--/.col-->
+
+                        <!--/.col-->
+                    </div><!--/.row-->
+                </footer>
+            </div>
+            <footer class="no-print">
+                <div class="row">
+                    <div class="col-sm-12 align-right">
+                        &copy; 2021 <a href="http://axiscloud.com/" target="_blank">axis Cloud Inc</a> All rights
+                        reserved
+                    </div><!--/.col-->
+                </div><!--/.row-->
+            </footer>
+        </div>
+    </div>
+    <!--</div>-->
+</div>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/merchant-theme/js/excanvas.min.js?98ca4c5ff2a8a1032920d977947f6537"></script>
+<![endif]-->
+<script src="/js/jquery-migrate-1.2.1.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/merchant-theme/js/jquery.ui.touch-punch.min.js?98ca4c5ff2a8a1032920d977947f6537"
+        type="text/javascript"></script>
+<script src="/merchant-theme/js/fullcalendar.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/merchant-theme/js/jquery.autosize.min.js?98ca4c5ff2a8a1032920d977947f6537"
+        type="text/javascript"></script>
+<script src="/merchant-theme/js/chosen.jquery.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/merchant-theme/js/date-time/bootstrap-datepicker.min.js?98ca4c5ff2a8a1032920d977947f6537"
+        type="text/javascript"></script>
+<script src="/merchant-theme/js/date-time/bootstrap-timepicker.min.js?98ca4c5ff2a8a1032920d977947f6537"
+        type="text/javascript"></script>
+<script src="/js/jquery.gritter.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/js/jquery.numeric.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/js/custom/mer_autocomplete.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/js/jquery.cookie.min.js?20170810" type="text/javascript"></script>
+<script src="/merchant-theme/js/ace-elements.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/merchant-theme/js/ace.min.js?98ca4c5ff2a8a1032920d977947f6537" type="text/javascript"></script>
+<script src="/merchant-theme/js/date-time/locales/bootstrap-datepicker.fr.js?98ca4c5ff2a8a1032920d977947f6537"
+        type="text/javascript"></script>
+<!-- Alert Message -->
+<div class="modal fade" id="alertSuccessMessage" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-success">
+                <button class="close" data-dismiss="modal" type="button">&times;</button>
+                <h4 class="modal-title">Notification</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Les données ont bien été sauvés !</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Alert Message -->
+<div class="modal fade" id="alertErrorMessage" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-danger">
+                <button class="close" data-dismiss="modal" type="button">&times;</button>
+                <h4 class="modal-title">Erreur</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delet alert Message -->
+<div class="modal fade" id="deleteConfirmMessageBox" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Effacer</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" href="#" id="process_delete" type="button">Oui</a>
+                <button class="btn btn-default" data-dismiss="modal" type="button">Aucun</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Delet alert Message -->
+<div class="modal fade" id="deleteAjaxConfirmMessageBox" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Effacer</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" href="#" id="process_delete_ajax" type="button">Oui</a>
+                <button class="btn btn-default" data-dismiss="modal" type="button">Aucun</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Other Confirm Message -->
+<div class="modal fade" id="confirmMessageBox" role="dialog">
+    <div class="modal-dialog"><!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Confirmation Required</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p></p>
+            </div>
+            <div class="modal-footer" id="modal-footer-0" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-1" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes1()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo1()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-2" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes2()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo2()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-3" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes3()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo3()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-4" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes4()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo4()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-5" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes5()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo5()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-6" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYes6()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNo6()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-Mc" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYesMc()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNoMc()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-Mcc" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYesMcc()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNoMcc()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-Qqb" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYesQqb()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNoQqb()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-crm6" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYescrm6()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNocrm6()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-setup" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYesSetup()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNoSetup()" type="button">Aucun</button>
+            </div>
+            <div class="modal-footer" id="modal-footer-deletecard" style="display: none">
+                <button class="btn btn-default" onclick="confirmValueYesDeletecard()" type="button">Oui</button>
+                <button class="btn btn-default" onclick="confirmValueNoDeletecard()" type="button">Aucun</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $thisfieldrequired = 'Ce champ est obligatoire';
+    $paymentDonotAdd = 'The payments entered do not add up to the total owe. Correct the amount or add a programmed payment.';
+    $remoteemsg = 'Veuillez corriger ce champ. ';
+    $emailemsg = 'Veuillez saisir une addresse email valide';
+    $urlemsg = 'Veuillez saisir une URL valide';
+    $dateemsg = 'Veuillez saisir une date valide';
+    $dateISOemsg = 'Veuillez saisir une date valide (ISO)'
+    $numberemsg = 'Veuillez saisir un numéro valide'
+    $digitsemsg = 'Veuillez saisir des chiffres uniquement';
+    $creditcardemsg = 'Veuillez saisir un numéro de carte de crédit valide';
+    $equalToemsg = 'Veuillez saisir la même valeur à nouveau';
+    $maxlengthemsg = 'Veuillez ne saisir que {0} caractère(s)';
+    $minlengthemsg = 'Veuillez saisir au moins {0} caractère(s)';
+    $rangelengthemsg = 'Veuillez saisir une valeur ayant une longueur de caractères entre {0} et {1}';
+    $rangeemsg = 'Veuillez saisir une valeur entre {0} et {1}.';
+    $maxemsg = 'Veuillez saisir une valeur inférieure ou égale à {0}.';
+    $minemsg = 'Veuillez saisir une valeur supérieure ou égale à {0}.';
+    $nextpaymentword = 'Prochain paiement';
+    $addProductTextWord = 'Ajouter';
+    $requiredErrorMessage = "Obligatoire";
+    $gradTotalrequiredErrorMessage = "Le grand total n'est pas égal à l'accord de paiement";
+    $recordsText = "Display _MENU_";
+    $showingPages = "";
+    $noRecordAvailable = "No records available";
+    $nothingFound = "No records available";
+    $therearenotrecords = "There are no results.";
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="myMessageModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">&times;</button>
+                <h4 class="modal-title" id="myMessageTitle">Message</h4>
+            </div>
+            <div class="modal-body" id="myMessageText">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Fermer</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</html>
+

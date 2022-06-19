@@ -1,0 +1,50 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+    .content-bg {
+        margin: 0 20px;
+        padding: 15px 25px 30px;
+    }
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    .content-bg {
+        margin: 0 20px;
+        padding: 15px 25px 30px;
+    }
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+    .content_area { padding-top: 60px }
+    .content-bg {
+        padding: 15px 15px 30px;
+        margin: 0 10px;
+    }
+    .main_content a { font-size: 12px }
+    .alignright { margin-left: 5px }
+    .alignleft { margin-right: 5px }
+    .footer_content p { font-size: 10px }
+    .main_content .input-icon,
+    .main_content .input-icon_two {
+        font-size: 26px;
+        left: 12px;
+        padding-right: 12px;
+    }
+    .main_content .input-icon_two {
+        top: 245px;
+        left: 15px;
+    }
+    .main_content .input-icon { top: 155px }
+    .main_content input { font-size: 16px }
+}
+.warning_message {
+	font-size:16px;
+	line-height:20px;
+	padding-bottom:20px;
+}
+.identified_two_session a,.identified_two_session a:hover{
+	color:#fff;
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    
+}
